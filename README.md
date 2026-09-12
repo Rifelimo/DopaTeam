@@ -23,7 +23,7 @@ Choose **Measure function independently**, then change the assumed noise. The ex
 
 The [spoken pitch](docs/pitch.md) is also available as text.
 
-The static website is prepared for a public production deployment on Vercel. See [deployment and collaboration](docs/deployment.md) for the setup and access model. A public URL will be added after the deployment is verified.
+The website is prepared for public hosting on Vercel, with GitHub as the shared editor. Once the connection is active, changes committed to `main` will update the website automatically. See [how to edit and publish](docs/deployment.md). The public URL will be added after the first deployment is verified.
 
 ## What has been built
 

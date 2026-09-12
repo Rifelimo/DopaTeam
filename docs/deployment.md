@@ -1,37 +1,48 @@
-# Deployment and collaboration
+# Edit and publish the website
 
-## Public website
+The first website explains StateLens and includes the interactive illustration and spoken pitch. Its text, appearance and behaviour are all in `index.html`. The full application is planned for a later snapshot.
 
-The first website is the standalone project explanation in `index.html`. It includes the interactive illustration and the pitch. The full application will be added in a later repository snapshot.
+## Make a change in your browser
 
-The deployment configuration uses Vercel’s static hosting. It needs no build command, dependency installation, database or environment variables. The `.vercelignore` file limits the upload to the public HTML and deployment configuration.
+After accepting your GitHub collaborator invitation:
 
-The target is a production website that can be opened without a Vercel login. Its public URL must be checked in a browser without an authenticated Vercel session before it is shared as a working deployment.
+1. Open the StateLens repository on GitHub and select `index.html`.
+2. Click the pencil icon to edit. Find the sentence or section you want to change.
+3. Select **Commit changes** and describe the change in one sentence.
+4. Commit to `main` to publish directly. Once the Vercel connection is active, this starts a new production deployment. The public site updates when that deployment succeeds.
 
-## Preview the upload
+For larger changes, create a branch and open a pull request. Review the change together, then merge it into `main` to publish. Preview deployments may require the project owner's authorization or a preview access link.
 
-From the repository root, use an authenticated Vercel CLI:
+Everyone edits the same source. Refresh before starting and check for recent changes from teammates. If an edit causes a problem, revert the commit on GitHub to trigger a deployment of the restored version.
+
+## How publishing works
+
+The intended connection is the public `Rifelimo/StateLens` GitHub repository to the `statelens` Vercel project. The production branch is `main`. GitHub collaborators can edit the code and trigger publication through this connection. They do not need the owner's Vercel password.
+
+Vercel serves the website. It is not the editor used in these steps. Opening the public page lets a visitor use it; changing it requires access to the GitHub source.
+
+The build command copies `index.html` into `dist/index.html`. Vercel serves only the `dist` directory. The site needs no dependencies, database or environment variables. Repository documentation is not part of the served website. The `.vercelignore` file also limits deployment source files to the HTML and configuration.
+
+For an optional CLI deployment, first link the local directory to the existing project in the intended account. Then inspect the upload:
 
 ```sh
-vercel deploy --dry --format=json
+vercel deploy --dry --format=json --scope krakras-projects
 ```
 
-The expected upload consists of `index.html` and `vercel.json`. Review that list before publishing.
-
-After the project has been created in the intended Vercel account, a production deployment can be made with:
+The expected source upload consists of `index.html` and `vercel.json`. After review, an authorized production deployment can use:
 
 ```sh
 vercel deploy --prod --project statelens --scope krakras-projects
 ```
 
-A prepared configuration is not a completed deployment. Record the returned production URL and verify the page and interaction after publication.
+## Check the first publication
 
-## Team access
+This snapshot prepares the configuration. It does not establish that the GitHub connection, collaborator access or website deployment is already active.
 
-A public website can be viewed without a team invitation. Editing the code is a separate permission: add the contributors as GitHub collaborators and have them accept their invitations.
+After setup, record the returned production URL. Open it without a Vercel login and check the page and interactive example. Confirm the production deployment uses the intended commit. Confirm each collaborator accepts their invitation before reporting that they have editing access.
 
-Use a separate branch for each change and a pull request for review. A GitHub invitation does not grant access to the Vercel account or its other projects.
+## Account access
 
-Vercel dashboard access is needed only for contributors who will manage deployments directly. Choose that access separately from GitHub collaboration. A Vercel Viewer role cannot configure or deploy the project. Direct deployment roles depend on the Vercel plan.
+GitHub collaboration is sufficient for the editing workflow above. Separate Vercel dashboard permissions are needed only for people who will manage hosting settings directly. A Vercel Viewer role cannot configure or deploy the project; other roles depend on the account plan.
 
-No repository integration or automated production release is established merely by adding these files. The publishing workflow should be agreed before enabling deployment triggers.
+References: [Vercel Git deployments](https://vercel.com/docs/git), [public repository collaboration](https://vercel.com/docs/deployments/troubleshoot-project-collaboration), and [GitHub collaborator invitations](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/repository-access-and-collaboration/inviting-collaborators-to-a-personal-repository).
