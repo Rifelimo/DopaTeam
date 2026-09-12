@@ -17,13 +17,14 @@ The page includes:
 - A clear explanation of the research question and the work completed.
 - An interactive comparison of three possible measurements.
 - The model assumptions, numerical results and limits of the evidence.
-- The proposed validation plan and a spoken pitch of about 90 seconds.
+- The proposed validation plan and a spoken pitch of about five minutes.
+- The team, published scientific foundation and sourced dementia impact figures.
 
 Choose **Measure function independently**, then change the assumed noise. The expected readings stay fixed while their uncertainty changes. The calculation can be expanded below the example.
 
 The [spoken pitch](docs/pitch.md) is also available as text.
 
-The website is prepared for public hosting on Vercel, with GitHub as the shared editor. Once the connection is active, changes committed to `main` will update the website automatically. See [how to edit and publish](docs/deployment.md). The public URL will be added after the first deployment is verified.
+The public website is [dopateam.vercel.app](https://dopateam.vercel.app). This local snapshot contains presentation updates awaiting publication approval. GitHub integration and teammate editing access are still pending. Once an approved connection is active, changes committed to `main` can update the website automatically. See [how to edit and publish](docs/deployment.md).
 
 ## What has been built
 
@@ -41,4 +42,6 @@ All values in this portable example are simulated. The result depends on the mod
 
 Project lead: Ricardo Félix Morais · Life Sciences
 
-Ricardo directed the project. Codex assisted with code, documentation and review.
+Ricardo leads DopaTeam with his colleagues Alex Chen and Seika Karamatsu. He is a neuroradiologist, researcher and MIT Sloan Fellows MBA student. Codex assisted with code, documentation and review.
+
+Ricardo is the first author of a [2025 study in Neurobiology of Disease](https://pubmed.ncbi.nlm.nih.gov/40194635/) on brain structure and neurotransmitter reference maps. That study provides scientific context; it does not validate the new simulation or its research utility.
