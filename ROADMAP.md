@@ -1,4 +1,4 @@
-# StateLens release plan
+# DopaTeam release plan
 
 The repository will be assembled in clear, cumulative snapshots. The full prototype already exists locally. Each repository update will describe the files added or changed, the checks completed and the work that remains.
 

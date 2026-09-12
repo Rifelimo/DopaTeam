@@ -1,12 +1,12 @@
 # Edit and publish the website
 
-The first website explains StateLens and includes the interactive illustration and spoken pitch. Its text, appearance and behaviour are all in `index.html`. The full application is planned for a later snapshot.
+The first website explains DopaTeam and includes the interactive illustration and spoken pitch. Its text, appearance and behaviour are all in `index.html`. The full application is planned for a later snapshot.
 
 ## Make a change in your browser
 
 After accepting your GitHub collaborator invitation:
 
-1. Open the StateLens repository on GitHub and select `index.html`.
+1. Open the DopaTeam repository on GitHub and select `index.html`.
 2. Click the pencil icon to edit. Find the sentence or section you want to change.
 3. Select **Commit changes** and describe the change in one sentence.
 4. Commit to `main` to publish directly. Once the Vercel connection is active, this starts a new production deployment. The public site updates when that deployment succeeds.
@@ -17,7 +17,7 @@ Everyone edits the same source. Refresh before starting and check for recent cha
 
 ## How publishing works
 
-The intended connection is the public `Rifelimo/StateLens` GitHub repository to the `statelens` Vercel project. The production branch is `main`. GitHub collaborators can edit the code and trigger publication through this connection. They do not need the owner's Vercel password.
+The intended connection is the public `Rifelimo/DopaTeam` GitHub repository to the `dopateam` Vercel project. The production branch is `main`. GitHub collaborators can edit the code and trigger publication through this connection. They do not need the owner's Vercel password.
 
 Vercel serves the website. It is not the editor used in these steps. Opening the public page lets a visitor use it; changing it requires access to the GitHub source.
 
@@ -32,7 +32,7 @@ vercel deploy --dry --format=json --scope krakras-projects
 The expected source upload consists of `index.html` and `vercel.json`. After review, an authorized production deployment can use:
 
 ```sh
-vercel deploy --prod --project statelens --scope krakras-projects
+vercel deploy --prod --project dopateam --scope krakras-projects
 ```
 
 ## Check the first publication

@@ -1,8 +1,8 @@
-# StateLens
+# DopaTeam
 
 ## What should we measure next in Alzheimer’s research?
 
-StateLens explores a practical research decision: when the same evidence fits different explanations, which additional measurement could tell them apart?
+DopaTeam explores a practical research decision: when the same evidence fits different explanations, which additional measurement could tell them apart?
 
 Imagine an imaging result that is compatible with two explanations. In one, circuit function is preserved. In the other, it is reduced. Another measurement is useful if its expected result differs between those explanations.
 
