@@ -8,7 +8,29 @@ Imagine an imaging result that is compatible with two explanations. In one, circ
 
 The intended user is an Alzheimer’s research team choosing its next experiment. The proposed value is a clearer reason for that choice, with the assumptions visible before time and resources are committed.
 
-## Explore the first snapshot
+## Run the initial code
+
+This first code parcel contains the starting layer: a deterministic synthetic dataset, regional pattern comparison and a command line example. The full application already exists locally and will be added in later repository parcels. These releases describe what becomes available in the repository, not an invented timeline of discovery.
+
+Use Node.js with the built in test runner. This snapshot was checked with Node.js 23.10.0 and needs no downloaded packages.
+
+```sh
+npm run demo
+npm test
+```
+
+The demo compares one synthetic structural pattern across 82 illustrative regions with 30 synthetic reference maps. It returns the five strongest rank correlations and shows how each changes when one region is omitted. All inputs are invented. A high correlation here illustrates pattern comparison; it does not identify a neurotransmitter mechanism or cell function.
+
+Code locations:
+
+- `src/core/molecular.mjs`: tied ranks, correlations and sensitivity calculations.
+- `src/data/synthetic.mjs`: deterministic synthetic inputs.
+- `scripts/demo.mjs`: the executable starting example.
+- `tests/molecular.test.mjs`: numerical and input checks.
+
+The functional model, three view React application and optional local research importer are scheduled for a later code parcel. The existing website includes a smaller illustration of the proposed workflow.
+
+## Explore the project explanation
 
 Download [the project explanation](index.html) and open it in a browser. It is a single HTML file with its own styling and JavaScript. It works without installation or an external service.
 
@@ -30,13 +52,17 @@ The public website is [dopateam.vercel.app](https://dopateam.vercel.app). This l
 
 A full browser prototype already exists locally. It has views for molecular context, competing functional states and the next experiment, together with an independent Python numerical reference and software tests.
 
-This first repository snapshot contains the explanation and a smaller interactive illustration. The runnable application and its source are planned for the next snapshot. The [release plan](ROADMAP.md) sets out the sequence. These are staged repository updates; they do not imply that the existing work was created on each publication date.
+This first repository snapshot contains the explanation, its smaller interactive illustration and the initial runnable pattern comparison module. The full application and its source are planned for the next snapshot. The [release plan](ROADMAP.md) sets out the sequence. These are staged repository updates; they do not imply that the existing work was created on each publication date.
 
 ## What the demonstration establishes
 
 The example deliberately holds imaging inputs and reference maps fixed while assuming two different functional responses. An independent functional measurement distinguishes that constructed pair in the noiseless model. Greater assumed noise makes the distinction less clear.
 
 All values in this portable example are simulated. The result depends on the model’s assumptions. It does not identify disease states in patients or establish the performance of a laboratory assay. Its usefulness for choosing real experiments still needs to be tested.
+
+## Scientific origin
+
+João Valério Rocha and collaborators’ MINNT research motivates the original neuroimaging question. The initial code here comes from our DopaTeam implementation and uses invented inputs. No MINNT notebook, original research CSV or saved notebook output is part of this public parcel. See [source and contribution record](PROVENANCE.md).
 
 ## Project
 

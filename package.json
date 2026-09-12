@@ -1,0 +1,12 @@
+{
+  "name": "dopateam-initial-code",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Original DopaTeam molecular comparison demo with synthetic data only",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "demo": "node scripts/demo.mjs",
+    "test": "node --test tests/*.test.mjs"
+  }
+}

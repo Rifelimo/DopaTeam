@@ -6,7 +6,7 @@ The target interval is ten hours. The organizer’s checkpoint deadlines are sep
 
 | Snapshot | Planned contents | Completion criterion |
 | --- | --- | --- |
-| 01 · Project introduction | README, full HTML explanation, interactive illustration and spoken pitch | The question, intended use and current limits are clear; the HTML works on desktop and mobile. |
+| 01 · Initial code and introduction | Synthetic generator, regional comparison module, command line demo, numerical checks, README and project website source | The starting calculation runs without downloads; inputs and scientific limits are explicit. |
 | 02 · Runnable prototype | Application source, synthetic data, numerical reference, tests and setup instructions | A clean checkout can run the demo and its documented checks. |
 | 03 · Method and evidence | Clearer application wording, explanation of the model, validation results and known limitations | Claims match the code and the reported checks can be reproduced. |
 | 04 · Demonstration package | A captioned walkthrough and a concise final pitch consistent with the current application | The recording shows the version described in the documentation. |
@@ -21,4 +21,4 @@ Software tests establish properties of the implementation. They do not establish
 
 ## Delivery status
 
-Snapshot 01 is prepared. Later snapshots are planned. A prepared package, a published repository update and a submission to the hackathon are distinct states.
+Snapshot 01 is prepared for its first public GitHub release. Later snapshots are planned. A prepared package, a published repository update and a submission to the hackathon are distinct states.
