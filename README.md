@@ -23,6 +23,8 @@ Choose **Measure function independently**, then change the assumed noise. The ex
 
 The [spoken pitch](docs/pitch.md) is also available as text.
 
+The static website is prepared for a public production deployment on Vercel. See [deployment and collaboration](docs/deployment.md) for the setup and access model. A public URL will be added after the deployment is verified.
+
 ## What has been built
 
 A full browser prototype already exists locally. It has views for molecular context, competing functional states and the next experiment, together with an independent Python numerical reference and software tests.
@@ -37,6 +39,6 @@ All values in this portable example are simulated. The result depends on the mod
 
 ## Project
 
-Ricardo Félix Morais · Solo participant · Life Sciences
+Project lead: Ricardo Félix Morais · Life Sciences
 
 Ricardo directed the project. Codex assisted with code, documentation and review.

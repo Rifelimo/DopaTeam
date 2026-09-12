@@ -1,0 +1,4 @@
+# Only the public website and its deployment configuration are uploaded.
+*
+!index.html
+!vercel.json

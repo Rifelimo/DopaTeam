@@ -1,6 +1,7 @@
 # Local dependencies and build output
 node_modules/
 dist/
+.vercel/
 __pycache__/
 *.pyc
 .DS_Store
