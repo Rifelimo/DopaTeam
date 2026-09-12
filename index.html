@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="StateLens explained: the research question, what was built, an interactive example, the evidence and the next experiment.">
+<title>StateLens | The project explained</title>
+<style>
+:root{--ink:#173640;--muted:#52686e;--teal:#006e75;--teal-light:#e9f3f2;--coral:#a54835;--coral-light:#f7eee9;--line:#d5e1e1;--paper:#fff;--soft:#f5f8f7;--serif:Georgia,'Times New Roman',serif;--sans:'Avenir Next',Avenir,'Segoe UI',sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:auto;scroll-padding-top:98px}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.7 var(--sans);-webkit-font-smoothing:antialiased}a{color:var(--teal);text-underline-offset:4px}button,input{font:inherit}button,a,input,summary{-webkit-tap-highlight-color:transparent}button{cursor:pointer}a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid var(--teal);outline-offset:5px}::selection{background:#cce7e3;color:var(--ink)}.skip{position:fixed;left:20px;top:-100px;z-index:20;background:var(--ink);color:white;padding:12px}.skip:focus{top:16px}.wrap{width:min(1120px,calc(100% - 88px));margin:auto}header{border-top:6px solid var(--teal);border-bottom:1px solid var(--line);background:#fff}header .wrap{display:flex;align-items:center;justify-content:space-between;min-height:84px;gap:20px}.brand{font:30px/1 var(--serif);color:var(--teal);text-decoration:none}.byline{color:var(--muted);font-size:13px;letter-spacing:.015em}h1,h2,h3,p{margin-top:0}h1,h2{font-family:var(--serif);font-weight:400;letter-spacing:-.035em}h1{font-size:clamp(40px,5.2vw,68px);line-height:1.11;max-width:850px;margin-bottom:28px}h2{font-size:clamp(31px,3.5vw,43px);line-height:1.2;margin-bottom:23px}h3{font-size:18px;line-height:1.4;font-weight:650;letter-spacing:-.015em;margin-bottom:11px}p{margin-bottom:18px}.hero{padding:76px 0 46px}.lead{font-size:21px;line-height:1.55;max-width:775px;color:var(--muted)}.hero .lead{margin-bottom:25px}.actions{display:flex;align-items:center;flex-wrap:wrap;gap:14px 25px}.button{border:1px solid var(--teal);border-radius:3px;background:var(--teal);color:#fff;padding:11px 19px;text-decoration:none;display:inline-block;font-size:15px;font-weight:600}.button:hover{background:#005b61}.text-link{font-size:15px;font-weight:600}.stage{font-size:13px;color:var(--muted);margin:21px 0 0}.route{display:grid;grid-template-columns:1fr 1fr 1.18fr;border-top:1px solid var(--line);padding:29px 0 38px;gap:30px}.route div{position:relative}.route div:not(:last-child):after{content:'→';position:absolute;right:0;top:13px;font-size:23px;color:var(--teal)}.route span{font-size:12px;color:var(--muted)}.route strong{display:block;font-size:16px;font-weight:600;padding-right:25px}.toc{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.97);border-block:1px solid var(--line)}.toc .wrap{display:flex;gap:27px;overflow-x:auto;scrollbar-width:thin;white-space:nowrap}.toc a{font-size:13px;padding:17px 0;text-decoration:none;color:var(--muted);border-bottom:2px solid transparent}.toc a:hover,.toc a[aria-current]{color:var(--teal);border-color:var(--teal)}.section{padding:65px 0;border-bottom:1px solid var(--line)}.section-grid{display:grid;grid-template-columns:215px minmax(0,1fr);gap:52px}.section-side{padding-top:6px}.section-number{font-family:var(--serif);font-size:33px;color:var(--teal);line-height:1}.section-side p{font-size:13px;margin-top:13px;color:var(--muted);max-width:150px}.prose{max-width:790px}.prose>p:last-child{margin-bottom:0}.two-states{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:25px 0}.state{background:var(--teal-light);padding:23px 25px;border-radius:4px}.state.b{background:var(--coral-light)}.state small{display:block;font-size:12px;letter-spacing:.035em;color:var(--teal);margin-bottom:8px}.state.b small{color:var(--coral)}.state h3{font-size:21px}.state p{font-size:15px;line-height:1.6;margin:0}.important{font-size:19px;line-height:1.6;border-left:3px solid var(--teal);padding:0 0 0 22px;margin:27px 0}.build-list{padding:0;margin:27px 0 0;list-style:none;counter-reset:build}.build-list li{display:grid;grid-template-columns:34px 1fr;gap:15px;padding:21px 0;border-top:1px solid var(--line);counter-increment:build}.build-list li:before{content:counter(build,decimal-leading-zero);font-size:12px;font-weight:600;color:var(--teal);padding-top:4px}.build-list h3{margin-bottom:5px}.build-list p{font-size:16px;margin:0}.small{font-size:14px;color:var(--muted);line-height:1.6}.technical{margin-top:23px}.technical summary{font-size:14px}.technical p{font-size:14px;margin-top:12px}details{border-top:1px solid var(--line);padding:15px 0}details:last-child{border-bottom:1px solid var(--line)}summary{cursor:pointer;font-weight:600;line-height:1.5;padding-right:15px}details[open] summary{margin-bottom:12px}details p:last-child{margin-bottom:0}.demo-section{background:var(--soft)}.demo{background:#fff;border:1px solid var(--line);border-radius:6px;padding:29px;margin-top:28px}.demo-intro{display:flex;align-items:baseline;justify-content:space-between;gap:15px;border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:22px}.demo-intro strong{font-size:14px}.demo-intro span{font-size:12px;color:var(--muted)}fieldset{border:0;margin:0;padding:0;min-width:0}legend{font-weight:600;font-size:16px;margin-bottom:12px}.choices{display:grid;gap:9px}.choice{display:flex;gap:11px;align-items:center;border:1px solid var(--line);padding:12px 14px;border-radius:4px;cursor:pointer;line-height:1.45;font-size:15px}.choice:has(input:checked){border-color:var(--teal);background:var(--teal-light);box-shadow:inset 3px 0 var(--teal)}.choice input{accent-color:var(--teal);width:17px;height:17px;flex:none;margin:0}.result-head{margin-top:29px;margin-bottom:10px;display:flex;align-items:baseline;justify-content:space-between;gap:15px}.result-head h3{margin:0;font-size:16px}.result-head span{font-size:12px;color:var(--muted)}.equal-reading{padding:20px 0 5px}.reading-row{display:grid;grid-template-columns:87px 1fr 83px;gap:13px;align-items:center;font-size:13px;margin-bottom:19px}.identical-track{height:8px;background:#e1eceb;border-radius:8px;position:relative}.identical-track:after{content:'';position:absolute;width:12px;height:12px;border:2px solid #fff;outline:1px solid var(--teal);border-radius:50%;background:var(--teal);left:50%;top:-2px}.reading-row.b .identical-track:after{background:var(--coral);outline-color:var(--coral)}.reading-row strong{font-size:12px;text-align:right}.chart{display:block;width:100%;height:auto;overflow:visible}.chart text{font-family:var(--sans);font-size:13px;fill:var(--muted)}.chart .row-label{font-size:14px;fill:var(--ink)}.chart .value-label{font-size:13px;fill:var(--ink);font-weight:600}.chart .axis{stroke:var(--line);stroke-width:1}.noise{border-top:1px solid var(--line);margin-top:10px;padding-top:19px}.control-title{display:flex;justify-content:space-between;gap:20px;font-size:14px}.control-title output{color:var(--teal);font-weight:600}input[type=range]{width:100%;accent-color:var(--teal);height:30px;margin:7px 0}.range-labels{display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}.disabled{opacity:.6}.result-message{font-size:16px;line-height:1.65;border-left:3px solid var(--teal);padding-left:16px;margin:24px 0 15px}.demo .small{font-size:12px}.reset{background:none;border:0;border-bottom:1px solid var(--teal);padding:0;font-size:13px;color:var(--teal);margin-top:13px}.calc{font-variant-numeric:tabular-nums}.calc p{font-size:14px}.calc code{white-space:normal;font:13px/1.7 ui-monospace,monospace;background:var(--soft);padding:2px 5px}.evidence-table{width:100%;border-collapse:collapse;font-size:15px;margin:24px 0}.evidence-table th{text-align:left;font-weight:600;font-size:12px;letter-spacing:.02em;color:var(--muted);background:var(--soft)}.evidence-table th,.evidence-table td{padding:15px 14px;border-bottom:1px solid var(--line);vertical-align:top}.evidence-table th:first-child,.evidence-table td:first-child{padding-left:0;width:31%}.evidence-table tbody th{background:transparent;color:var(--ink);font-size:15px;letter-spacing:0}.evidence-note{margin-top:25px;padding:24px 26px;background:var(--teal-light);border-radius:4px}.evidence-note p{font-size:16px;margin-bottom:12px}.evidence-note p:last-child{margin-bottom:0}.next-step{display:grid;grid-template-columns:34px 1fr;gap:17px;margin:26px 0}.next-step .num{font:27px var(--serif);color:var(--teal)}.next-step p{font-size:16px}.pitch-section{background:#173640;color:#fff;border:0}.pitch-section h2{color:#fff}.pitch-section .section-number{color:#a8d7cf}.pitch-section .section-side p{color:#b4c9cc}.pitch-section .small{color:#b4c9cc}.pitch{font-size:19px;line-height:1.8;max-width:740px}.pitch p{margin-bottom:21px}.pitch p:last-child{font-weight:600;color:#c4e6df;margin-bottom:0}.pitch-tools{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:25px}.copy{background:transparent;border:1px solid #8bb5b7;color:#fff;border-radius:3px;padding:8px 13px;font-size:13px}.copy:hover{background:#274c56}.pitch-status{font-size:12px;min-height:20px;color:#c4e6df;margin-top:13px}.demo-cues{border-top:1px solid #48636a;margin-top:32px;padding-top:23px;font-size:15px;color:#ccdbdd}.demo-cues strong{color:white}.faq details{padding:20px 0}.faq details p{font-size:16px}.closing{font:29px/1.45 var(--serif);max-width:800px;padding:43px 0 4px;letter-spacing:-.02em}.footer{padding:32px 0 45px;font-size:13px;color:var(--muted);display:flex;justify-content:space-between;gap:20px}.footer a{white-space:nowrap}[hidden]{display:none!important}noscript p{background:var(--coral-light);padding:20px;font-size:15px}
+@media(min-width:1400px){body{font-size:18px}.hero{padding-top:88px}}
+@media(max-width:850px){.wrap{width:calc(100% - 44px)}.section-grid{grid-template-columns:130px minmax(0,1fr);gap:30px}.section-side p{font-size:12px}.toc .wrap{gap:22px}.route{gap:23px}.route strong{font-size:14px}.hero{padding-top:54px}}
+@media(max-width:620px){html{scroll-padding-top:74px}.wrap{width:calc(100% - 36px)}header .wrap{min-height:75px}.brand{font-size:27px}.byline{font-size:11px;max-width:145px;text-align:right}.hero{padding:43px 0 32px}h1{font-size:40px;max-width:420px}.lead{font-size:19px}.stage{font-size:12px}.route{grid-template-columns:1fr;gap:13px;padding-bottom:27px}.route div{display:flex;align-items:baseline;gap:18px}.route span{min-width:62px}.route strong{font-size:14px}.route div:not(:last-child):after{display:none}.section{padding:42px 0}.section-grid{display:block}.section-side{display:flex;gap:12px;align-items:baseline;margin-bottom:18px}.section-number{font-size:24px}.section-side p{margin:0;max-width:none;font-size:12px}.two-states{grid-template-columns:1fr;gap:12px}.state{padding:19px 21px}.state p{font-size:15px}.toc a{font-size:12px;padding:14px 0}.toc .wrap{gap:23px}.demo{padding:20px 16px}.demo-intro{display:block}.demo-intro span{display:block;margin-top:5px}.result-head{display:block}.result-head span{display:block;margin-top:5px}.reading-row{grid-template-columns:67px 1fr 63px;gap:7px;font-size:12px}.reading-row strong{font-size:10px}.choice{font-size:14px;padding:12px 10px}.evidence-table{font-size:14px}.evidence-table td,.evidence-table th{padding:13px 9px}.evidence-table th:first-child{width:32%}.evidence-table tbody th{font-size:13px}.evidence-note{padding:20px}.pitch{font-size:18px}.pitch-tools{align-items:flex-start}.footer{display:block}.footer a{display:inline-block;margin-top:13px}.closing{font-size:26px}.important{font-size:18px}.build-list{margin-top:20px}}
+@media(max-width:620px){.chart text{font-size:22px}.chart .row-label{font-size:20px}.chart .value-label{font-size:22px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media print{body{font-size:11pt;color:#173640}.wrap{width:100%}header{border-top:3pt solid #006e75}.toc,.actions,.copy,.pitch-status,.reset,.skip{display:none!important}.hero{padding:20pt 0}h1{font-size:32pt}h2{font-size:24pt}.lead{font-size:14pt}.section{padding:23pt 0}.section-grid{grid-template-columns:95pt 1fr;gap:20pt}.section-side p{font-size:9pt}.section-number{font-size:22pt}.demo,.state,.evidence-note,.next-step{break-inside:avoid}.pitch-section{background:white;color:#173640}.pitch-section h2,.pitch-section .section-number,.pitch p:last-child{color:#173640}.pitch-section .small,.pitch-section .section-side p,.demo-cues,.demo-cues strong{color:#52686e}.pitch{font-size:12pt;line-height:1.6}.pitch-section{break-before:page}.evidence-table{font-size:10pt}.footer{padding-bottom:0}details>*{display:block!important}summary{list-style:none}.section-side{break-after:avoid}.noise input{print-color-adjust:exact}a{text-decoration:none}.two-states{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the explanation</a>
+<header id="top"><div class="wrap"><a class="brand" href="#top" aria-label="StateLens, back to top">StateLens</a><div class="byline">Ricardo Félix Morais<br>Life Sciences · Alzheimer’s research</div></div></header>
+<main id="main">
+<div class="wrap">
+<section class="hero" aria-labelledby="title">
+<h1 id="title">What should we measure next in Alzheimer’s research?</h1>
+<p class="lead">StateLens explores a practical research decision: when the same evidence fits different explanations, which additional measurement could tell them apart?</p>
+<div class="actions"><a class="button" href="#example">Explore the example</a><a class="text-link" href="#pitch">Read the spoken pitch ↗</a></div>
+<p class="stage">Working prototype with simulated data. This page explains what was built and what it demonstrates.</p>
+</section>
+<div class="route" aria-label="The idea in three steps"><div><span>Start with</span><strong>The evidence available</strong></div><div><span>Compare</span><strong>The explanations that fit</strong></div><div><span>Decide</span><strong>What would tell them apart</strong></div></div>
+</div>
+<nav class="toc" aria-label="On this page"><div class="wrap"><a href="#question">The question</a><a href="#built">What was built</a><a href="#example">Try the example</a><a href="#evidence">What was checked</a><a href="#next">The next step</a><a href="#pitch">The pitch</a><a href="#questions">Questions</a></div></nav>
+
+<section class="section" id="question"><div class="wrap section-grid"><aside class="section-side"><span class="section-number" aria-hidden="true">01</span><p>The research question</p></aside><div class="prose">
+<h2>A result can be clear.<br>Its meaning can still be uncertain.</h2>
+<p>Imagine a research team finds a pattern of structural brain changes. Comparing that pattern with maps of neurotransmitter systems gives it a possible biological lead. The team now needs to decide what that finding means and what to investigate next.</p>
+<p>The difficulty is that two explanations may fit the same observations. In the demonstration, the imaging data look identical in both scenarios, but the assumed function of the circuit is different.</p>
+<div class="two-states"><div class="state"><small>SCENARIO A</small><h3>Function is preserved.</h3><p>A stronger assumed response maintains the modelled output.</p></div><div class="state b"><small>SCENARIO B</small><h3>Function is reduced.</h3><p>A weaker assumed response produces a lower modelled output.</p></div></div>
+<p>Here, function means a simplified representation of how well a circuit performs its role. It is a quantity defined in the model. Neither scenario is a finding about a real patient.</p>
+<p class="important">Before collecting more data, the useful question is whether those data could distinguish the explanations we already have.</p>
+<h3>Who would use this?</h3>
+<p>The intended user is an Alzheimer’s research team choosing an experiment after an imaging finding. The proposed benefit is a clearer reason for that choice, with the assumptions visible before time and resources are committed.</p>
+</div></div></section>
+
+<section class="section" id="built"><div class="wrap section-grid"><aside class="section-side"><span class="section-number" aria-hidden="true">02</span><p>The work completed</p></aside><div class="prose">
+<h2>What has actually been built.</h2>
+<p>The work produced a browser prototype with three connected views: <strong>Molecular context</strong>, <strong>Competing states</strong> and <strong>Next experiment</strong>. It turns the research question into a small example whose assumptions and calculations can be inspected.</p>
+<ol class="build-list">
+<li><div><h3>A way to explore imaging patterns and reference maps.</h3><p>The molecular view compares values across 82 simulated regions with 30 illustrative reference maps. It ranks how closely the patterns correspond and checks how the result changes when one region is left out. These comparisons describe an association; they do not establish its biological cause.</p></div></li>
+<li><div><h3>Two explanations that share the same observations.</h3><p>The competing states view keeps the imaging inputs and reference maps fixed. The user changes assumptions about functional response and sees the resulting output change. This makes the information missing from those observations visible.</p></div></li>
+<li><div><h3>A comparison of three additional measurements.</h3><p>The next experiment view compares another structural observation, another atlas score and an independent measure of function. It shows which of these three predefined options separates the constructed pair and how that separation changes as measurement noise increases.</p></div></li>
+<li><div><h3>A reproducible calculation and a local record of the result.</h3><p>The same numerical example has an independent Python implementation alongside the browser calculations. The prototype can export its parameters, outputs and comparison scores to a local file so the reasoning can be reviewed.</p></div></li>
+<li><div><h3>A complete demonstration that works with synthetic data.</h3><p>The portable example contains invented imaging and reference values. It needs no patient records or model API. The full prototype also supports an optional local import of compatible research aggregates. Importing those data supplies context; it does not validate the functional model.</p></div></li>
+</ol>
+<details class="technical"><summary>How the parts fit together</summary><p>The full prototype uses React and Vite for the interface, JavaScript for the interactive calculations and Python for an independent numerical check. The reference map comparison and the functional simulation are separate: a high map association does not set the functional response or establish a cell state.</p><p>This HTML page is a standalone explanation with a smaller illustration of the same model. Its text, styling and interaction are contained in this file, so it can be opened without installing the full prototype.</p></details>
+</div></div></section>
+
+<section class="section demo-section" id="example"><div class="wrap section-grid"><aside class="section-side"><span class="section-number" aria-hidden="true">03</span><p>The idea in action</p></aside><div class="prose">
+<h2>Which measurement would help?</h2>
+<p>Both scenarios below start with the same simulated imaging inputs and reference maps. Choose an additional measurement and see whether its expected result changes between the two scenarios.</p>
+<div class="demo" id="interactive-example">
+<div class="demo-intro"><strong>One fixed example. Two possible explanations.</strong><span>All values are simulated.</span></div>
+<fieldset><legend>What would you measure next?</legend><div class="choices">
+<label class="choice"><input type="radio" name="measurement" value="structural" checked><span>Repeat the same structural observation</span></label>
+<label class="choice"><input type="radio" name="measurement" value="atlas"><span>Calculate another reference map score</span></label>
+<label class="choice"><input type="radio" name="measurement" value="function"><span>Measure function independently</span></label>
+</div></fieldset>
+<div class="result-head"><h3 id="reading-heading">Expected readings</h3><span id="reading-units">Identical by construction</span></div>
+<div id="equal-reading" class="equal-reading" role="img" aria-label="Both scenarios give the same expected observation."><div class="reading-row"><span>Scenario A</span><div class="identical-track"></div><strong>Same value</strong></div><div class="reading-row b"><span>Scenario B</span><div class="identical-track"></div><strong>Same value</strong></div></div>
+<div id="functional-reading" hidden>
+<svg class="chart" viewBox="0 0 620 188" role="img" aria-labelledby="chart-title chart-desc">
+<title id="chart-title">Expected functional readings for two simulated scenarios</title><desc id="chart-desc">Scenario A has an expected value of 1.008. Scenario B has an expected value of 0.576. Shaded bands extend one assumed standard deviation on each side of the expected value.</desc>
+<line class="axis" x1="95" x2="590" y1="56" y2="56"/><line class="axis" x1="95" x2="590" y1="112" y2="112"/>
+<text class="row-label" x="0" y="61">Scenario A</text><text class="row-label" x="0" y="117">Scenario B</text>
+<rect id="band-a" y="42" height="28" rx="5" fill="#d2e9e5"/><rect id="band-b" y="98" height="28" rx="5" fill="#f0dbd3"/>
+<circle id="dot-a" cy="56" r="6" fill="#006e75"/><circle id="dot-b" cy="112" r="6" fill="#a54835"/>
+<text id="value-a" class="value-label" y="30" text-anchor="middle">1.008</text><text id="value-b" class="value-label" y="86" text-anchor="middle">0.576</text>
+<text x="95" y="153">Lower output</text><text x="590" y="153" text-anchor="end">Higher output</text><text x="342" y="179" text-anchor="middle">Illustrative model units</text>
+</svg>
+</div>
+<div class="noise disabled" id="noise-control"><div class="control-title"><label for="noise">Assumed measurement noise</label><output for="noise" id="noise-output">0.10</output></div><input id="noise" type="range" min="0.05" max="0.30" step="0.01" value="0.10" disabled aria-describedby="noise-help"><div class="range-labels"><span>Less noise</span><span>More noise</span></div><p class="small" id="noise-help">Choose the independent functional measurement to explore noise.</p></div>
+<p id="result-message" class="result-message" role="status" aria-live="polite">The expected structural observation is the same in both scenarios. Repeating it does not resolve this particular question under the model’s assumptions.</p>
+<p class="small">The example was deliberately constructed to leave function unobserved. It does not establish a general limit on what brain imaging can reveal.</p>
+<button class="reset" type="button" id="reset">Reset the example</button>
+<noscript><p>The interactive controls need JavaScript. In this fixed example, structural observations and atlas scores are identical in both scenarios. An independent functional reading gives 1.008 in scenario A and 0.576 in scenario B. More measurement noise makes that difference harder to distinguish.</p></noscript>
+<details class="technical calc"><summary>See the calculation and its assumptions</summary><p>The demonstration assumes <code>functional output = substrate × response</code>. Both scenarios use the same hypothetical substrate, 0.72. This variable is not a measurement of MRI volume or cell count.</p><p><strong>Scenario A:</strong> <code>0.72 × 1.40 = 1.008</code><br><strong>Scenario B:</strong> <code>0.72 × 0.80 = 0.576</code></p><p>The expected output difference is 0.432. A demonstration threshold of 0.8 puts one output above the threshold and the other below it. That threshold is arbitrary and has no clinical interpretation.</p><p id="separation">At noise 0.10, the expected difference divided by noise is 4.32.</p><p>Noise is the assumed standard deviation of one measurement. Each shaded band extends that distance on either side of the expected reading. These bands are illustrative, not observed data or confidence intervals. Separation divided by noise is not a probability of diagnosis or a measure of clinical accuracy.</p></details>
+</div>
+</div></div></section>
+
+<section class="section" id="evidence"><div class="wrap section-grid"><aside class="section-side"><span class="section-number" aria-hidden="true">04</span><p>The evidence so far</p></aside><div class="prose">
+<h2>What was checked, and what it tells us.</h2>
+<p>The prototype was checked at two levels: whether the calculations behave as intended and whether the software works. These checks support a functioning demonstration. They do not establish that it improves real research decisions.</p>
+<table class="evidence-table"><caption class="small" style="text-align:left;padding-bottom:10px">Results from the constructed example and software verification.</caption><thead><tr><th scope="col">Check</th><th scope="col">Result and meaning</th></tr></thead><tbody>
+<tr><th scope="row">Keep the observations fixed</th><td>Imaging inputs and reference maps remain identical while the assumed functional outputs differ. The available observations cannot distinguish this constructed pair.</td></tr>
+<tr><th scope="row">Add a functional reading</th><td>The expected readings are 1.008 and 0.576. The gap is 0.432 in illustrative units. The added measurement separates this pair in the noiseless model.</td></tr>
+<tr><th scope="row">Increase measurement noise</th><td>Doubling noise from 0.10 to 0.20 changes the gap divided by noise from 4.32 to 2.16. The underlying outputs stay the same; the measurement becomes less informative relative to its uncertainty.</td></tr>
+<tr><th scope="row">Check the implementation</th><td id="test-evidence">All 12 JavaScript tests and 12 independent Python tests passed in the latest check. The production build also passed. These checks establish numerical and software consistency for the tested cases, separate from biological validation.</td></tr>
+</tbody></table>
+<div class="evidence-note"><h3>Where the evidence stops.</h3><p>The model deliberately excludes the functional response from the observations. The result therefore depends on that assumption. Another acquisition or another model could provide additional information.</p><p>The current prototype does not determine which explanation is true in a patient. It compares predefined measurement types, rather than choosing a specific laboratory assay. Its usefulness for experimental planning still needs to be tested.</p></div>
+</div></div></section>
+
+<section class="section" id="next"><div class="wrap section-grid"><aside class="section-side"><span class="section-number" aria-hidden="true">05</span><p>From a demo to useful evidence</p></aside><div class="prose">
+<h2>What would make this useful in practice?</h2>
+<p>The next step is to test the proposed value directly. A convincing demonstration is a starting point. It needs to lead to a better research decision and then to a measurement that works in an experimental system.</p>
+<div class="next-step"><span class="num" aria-hidden="true">1</span><div><h3>Test whether it improves the choice of measurement.</h3><p>Give researchers the same question and information. Compare those using StateLens with those using a static presentation. Assess whether they identify the unresolved explanations, choose a measurement that could distinguish them and explain why. This would test the value of making the assumptions explicit.</p></div></div>
+<div class="next-step"><span class="num" aria-hidden="true">2</span><div><h3>Test the proposed measurement in a suitable biological system.</h3><p>Define what useful circuit function means in that system and how it can be measured. Then test whether the added measurement distinguishes the competing explanations, with the relevant cells identified and independent data reserved for evaluation.</p></div></div>
+<p class="important">The intended outcome is a better justified next experiment. Any claim of saved time, lower cost or improved scientific results would need evidence from that next stage.</p>
+</div></div></section>
+
+<section class="section pitch-section" id="pitch"><div class="wrap section-grid"><aside class="section-side"><span class="section-number" aria-hidden="true">06</span><p>A pitch you can use</p></aside><div class="prose">
+<h2>What evidence would actually change our conclusion?</h2>
+<div class="pitch-tools"><span class="small">About 90 seconds at a steady pace with pauses.</span><button class="copy" id="copy-pitch" type="button">Copy the pitch</button></div>
+<div class="pitch" id="pitch-text">
+<p>I’m Ricardo, and I’m building StateLens for Alzheimer’s research.</p>
+<p>Imagine you have a brain imaging result that fits two different explanations. In one, function is still preserved. In the other, it is reduced. Before running another experiment, you need to know what measurement could tell those explanations apart.</p>
+<p>That is the decision StateLens is designed to support.</p>
+<p>It brings imaging data and neurotransmitter reference maps into an interactive workspace. In the current demo, two simulated scenarios have exactly the same imaging inputs but different functional outputs. The user compares additional measurements and sees which one separates those scenarios under the model’s assumptions.</p>
+<p>The demo also shows why measurement quality matters. As noise increases, the difference becomes harder to distinguish.</p>
+<p>The intended benefit is a clearer reason to choose the next experiment, with the assumptions visible before time and resources are committed.</p>
+<p>I have built a working prototype with simulated data. The next step is to test whether it improves researchers’ measurement choices, then assess those choices in a suitable experimental system.</p>
+<p>StateLens starts with a practical question: what evidence would actually change our conclusion?</p>
+</div>
+<div class="pitch-status" id="copy-status" role="status" aria-live="polite"></div>
+<div class="demo-cues"><strong>What to show while speaking.</strong> Start with the two scenarios. Switch to the independent functional measurement and increase noise once. Close with the plan to test research usefulness and then the measurement itself.</div>
+</div></div></section>
+
+<section class="section" id="questions"><div class="wrap section-grid"><aside class="section-side"><span class="section-number" aria-hidden="true">07</span><p>Questions you may be asked</p></aside><div class="prose faq">
+<h2>A few distinctions worth being clear about.</h2>
+<details><summary>What is a neurotransmitter map?</summary><p>In this project, the term refers to a reference pattern related to a neurotransmitter system across brain regions. The molecular view compares that pattern with a regional imaging pattern. The portable demonstration uses invented values for both.</p><p>A reference map supplies context. It does not measure an individual patient’s neurotransmitter levels or establish how a particular cell population is functioning.</p></details>
+<details><summary>Why are the map comparison and the functional model separate?</summary><p>They answer different questions. The map comparison describes how two regional patterns correspond. The functional model explores what can happen under two assumed responses. The present prototype does not infer the response from a map score, and it does not establish a biological mechanism linking the two.</p></details>
+<details><summary>Does StateLens find the right explanation?</summary><p>The current example shows why the starting observations leave two explanations open. It then compares additional measurements that might separate them under the chosen assumptions. Establishing the correct explanation in a real system requires independent evidence.</p></details>
+<details><summary>Is the result surprising if the model was built that way?</summary><p>The mathematical result follows from the assumptions. The proposed contribution is to make those assumptions inspectable and connect an unresolved explanation to a measurement question. Whether that helps researchers make better choices is a separate claim that can be tested.</p></details>
+<details><summary>What is complete, and what remains to be done?</summary><p>The working software, synthetic example, measurement comparison, independent numerical reference and local export are complete as a prototype. The next work is to assess research usefulness and test an appropriate functional measurement in an experimental system.</p></details>
+<details><summary>Are these patient results?</summary><p>No. The portable demonstration and the illustration on this page use simulated values. The optional local aggregate importer is a separate feature. Imported research context does not turn the simulation into a validated patient model.</p></details>
+</div></div></section>
+<div class="wrap"><p class="closing">The question is simple. The useful work is making the answer testable.</p><footer class="footer"><span>StateLens · Ricardo Félix Morais<br>Project explanation · September 2026</span><a href="#top">Back to the beginning ↑</a></footer></div>
+</main>
+<script>
+(() => {
+  'use strict';
+  const $ = id => document.getElementById(id);
+  const choices = [...document.querySelectorAll('input[name="measurement"]')];
+  const noise = $('noise');
+  const expectedA = 0.72 * 1.4;
+  const expectedB = 0.72 * 0.8;
+  const position = value => 95 + value / 1.4 * 495;
+  function drawBand(suffix, value, sigma) {
+    const left = position(value - sigma), right = position(value + sigma);
+    $('band-' + suffix).setAttribute('x', left.toFixed(3));
+    $('band-' + suffix).setAttribute('width', (right - left).toFixed(3));
+    $('dot-' + suffix).setAttribute('cx', position(value).toFixed(3));
+    $('value-' + suffix).setAttribute('x', position(value).toFixed(3));
+  }
+  function update() {
+    const selected = choices.find(input => input.checked).value;
+    const functional = selected === 'function';
+    const sigma = Number(noise.value);
+    $('equal-reading').hidden = functional;
+    $('functional-reading').hidden = !functional;
+    noise.disabled = !functional;
+    $('noise-control').classList.toggle('disabled', !functional);
+    $('noise-output').value = sigma.toFixed(2);
+    $('reading-units').textContent = functional ? 'Hypothetical output, in model units' : 'Identical by construction';
+    $('noise-help').textContent = functional ? 'The bands widen as assumed noise increases. The expected outputs do not change.' : 'Choose the independent functional measurement to explore noise.';
+    const explanations = {
+      structural: 'The expected structural observation is the same in both scenarios. Repeating it does not resolve this particular question under the model’s assumptions.',
+      atlas: 'The imaging inputs and reference maps are fixed. Calculating another score from those same inputs leaves the two scenarios indistinguishable in this example.',
+      function: sigma >= 0.22 ? 'The expected functional readings differ, but the wider noise bands overlap. Greater uncertainty makes the distinction less clear; the model does not provide a clinical accuracy estimate.' : 'The expected functional readings differ. This measurement adds information that the shared imaging inputs leave out. More noise makes that difference smaller relative to uncertainty.'
+    };
+    $('result-message').textContent = explanations[selected];
+    $('separation').textContent = 'At noise ' + sigma.toFixed(2) + ', the expected difference divided by noise is ' + (Math.abs(expectedA-expectedB)/sigma).toFixed(2) + '.';
+    $('chart-desc').textContent = 'Scenario A has an expected value of 1.008. Scenario B has an expected value of 0.576. Shaded bands show ' + sigma.toFixed(2) + ' model units, one assumed standard deviation, on each side of each expected value.';
+    drawBand('a', expectedA, sigma); drawBand('b', expectedB, sigma);
+  }
+  choices.forEach(input => input.addEventListener('change', update));
+  noise.addEventListener('input', update);
+  $('reset').addEventListener('click', () => {choices[0].checked = true; noise.value = '0.10'; update();});
+  $('copy-pitch').addEventListener('click', async () => {
+    const text = [...$('pitch-text').querySelectorAll('p')].map(p => p.textContent.trim()).join('\n\n');
+    try {
+      if (!navigator.clipboard || !window.isSecureContext) throw new Error('Clipboard unavailable');
+      await navigator.clipboard.writeText(text);
+      $('copy-status').textContent = 'Pitch copied.';
+    } catch (_) {
+      const range = document.createRange(); range.selectNodeContents($('pitch-text'));
+      const selection = window.getSelection(); selection.removeAllRanges(); selection.addRange(range);
+      $('copy-status').textContent = 'The pitch is selected. Use your usual copy command.';
+    }
+  });
+  const links = [...document.querySelectorAll('.toc a')];
+  const sections = links.map(link => document.querySelector(link.getAttribute('href')));
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(entries => {
+      const visible = entries.filter(entry => entry.isIntersecting).sort((a,b) => a.boundingClientRect.top - b.boundingClientRect.top);
+      if (visible.length) links.forEach(link => {
+        if (link.getAttribute('href') === '#' + visible[0].target.id) link.setAttribute('aria-current','location');
+        else link.removeAttribute('aria-current');
+      });
+    }, {rootMargin:'-70px 0px -65% 0px'});
+    sections.forEach(section => observer.observe(section));
+  }
+  update();
+})();
+</script>
+</body>
+</html>
