@@ -28,23 +28,19 @@ Code locations:
 - `scripts/demo.mjs`: the executable starting example.
 - `tests/molecular.test.mjs`: numerical and input checks.
 
-The functional model, three view React application and optional local research importer are scheduled for a later code parcel. The existing website includes a smaller illustration of the proposed workflow.
+The functional model, three view React application and optional local research importer are scheduled for a later code parcel. The website explains the proposed workflow with a simple written example.
 
 ## Explore the project explanation
 
-Download [the project explanation](index.html) and open it in a browser. It is a single HTML file with its own styling and JavaScript. It works without installation or an external service.
+The website has three short pages with shared styling. Keep `index.html`, `impact.html`, `hackathon.html` and `site.css` together, then open `index.html` in a browser.
 
-The page includes:
+- [The project](index.html): the idea and what has already been built.
+- [Why it matters](impact.html): human impact, treatment needs, market context and a short pitch.
+- [For the hackathon](hackathon.html): the next steps and submission requirements.
 
-- A clear explanation of the research question and the work completed.
-- An interactive comparison of three possible measurements.
-- The model assumptions, numerical results and limits of the evidence.
-- The proposed validation plan and a spoken pitch of about five minutes.
-- The team, published scientific foundation and sourced dementia impact figures.
+The site explains the work in plain English. The interactive research prototype runs separately and is scheduled for a later source parcel.
 
-Choose **Measure function independently**, then change the assumed noise. The expected readings stay fixed while their uncertainty changes. The calculation can be expanded below the example.
-
-The [spoken pitch](docs/pitch.md) is also available as text.
+The earlier [five minute spoken pitch](docs/pitch.md) remains available as a separate draft.
 
 The public website is [dopateam.vercel.app](https://dopateam.vercel.app). This local snapshot contains presentation updates awaiting publication approval. GitHub integration and teammate editing access are still pending. Once an approved connection is active, changes committed to `main` can update the website automatically. See [how to edit and publish](docs/deployment.md).
 
@@ -52,7 +48,7 @@ The public website is [dopateam.vercel.app](https://dopateam.vercel.app). This l
 
 A full browser prototype already exists locally. It has views for molecular context, competing functional states and the next experiment, together with an independent Python numerical reference and software tests.
 
-This first repository snapshot contains the explanation, its smaller interactive illustration and the initial runnable pattern comparison module. The full application and its source are planned for the next snapshot. The [release plan](ROADMAP.md) sets out the sequence. These are staged repository updates; they do not imply that the existing work was created on each publication date.
+This repository snapshot contains the three page explanation and the initial runnable pattern comparison module. The full application and its source are planned for the next snapshot. The [release plan](ROADMAP.md) sets out the sequence. These are staged repository updates; they do not imply that the existing work was created on each publication date.
 
 ## What the demonstration establishes
 
