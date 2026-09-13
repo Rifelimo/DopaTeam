@@ -1,24 +1,28 @@
 # DopaTeam release plan
 
-The repository will be assembled in clear, cumulative snapshots. The full prototype already exists locally. Each repository update will describe the files added or changed, the checks completed and the work that remains.
+The initial synthetic code parcel is already published. It remains available while later updates focus on the coauthored article, its evidence, a proposed next experiment and the final pitch. Each update will describe what changed, what was checked and what remains uncertain.
 
-The target interval is ten hours. The organizer’s checkpoint deadlines are separate from this internal update schedule.
+The internal target interval is ten hours. Completed website versions are checked and published before the next version begins. The organizer’s fixed checkpoint deadlines are separate from this cadence; a repository update does not establish checkpoint delivery.
 
 | Snapshot | Planned contents | Completion criterion |
 | --- | --- | --- |
-| 01 · Initial code and introduction | Synthetic generator, regional comparison module, command line demo, numerical checks, README and project website source | The starting calculation runs without downloads; inputs and scientific limits are explicit. |
-| 02 · Runnable prototype | Application source, synthetic data, numerical reference, tests and setup instructions | A clean checkout can run the demo and its documented checks. |
-| 03 · Method and evidence | Clearer application wording, explanation of the model, validation results and known limitations | Claims match the code and the reported checks can be reproduced. |
-| 04 · Demonstration package | A captioned walkthrough and a concise final pitch consistent with the current application | The recording shows the version described in the documentation. |
-| 05 · Complete candidate | Check links, installation, mobile use, tests and all submission materials | The full candidate is ready before the sponsored tools close. |
-| 06 · Final review | Review changes since the complete candidate and prepare the final delivery record | The final package is complete and ready before the organizer’s deadline. |
+| 01 · Initial code and introduction | Published synthetic generator, regional comparison module, command line demo, numerical tests and website source | The example uses 82 invented regions and 30 invented maps; its limits and run instructions are explicit. |
+| 02 · Article and context | Presentation of the 2026 manuscript, the Alzheimer’s burden and the treatment research question | Every material claim has a source; the separate 2025 publication is clearly distinguished. |
+| 03 · Evidence and interpretation | Explain the methods, reported results, alternative explanations and limitations | Manuscript findings are separated from our interpretation; no reproduction of the paper’s results is claimed. |
+| 04 · Next experiment | Define a biological hypothesis, measurable outcome, comparison and result that would change the interpretation | The proposal states what it could establish and what would remain uncertain. |
+| 05 · Final pitch | Refine the research argument and presentation for the hackathon | The pitch matches the article analysis, attribution and limits. |
+| 06 · Final review | Check sources, links, scientific wording and the exact proposed submission package | The final package is complete, checked and ready before the organizer’s deadline. |
 
 ## Quality standard
 
 Every update should answer three questions: what changed, what was checked and what remains uncertain.
 
-Software tests establish properties of the implementation. They do not establish biological validity or clinical usefulness. The next scientific work is to test whether the tool improves researchers’ measurement choices and whether an appropriate functional measurement distinguishes the explanations in an experimental system.
+Software tests establish properties of the implementation. They do not establish biological validity or clinical usefulness. The synthetic calculation does not reproduce the article’s results. The next scientific step is a clearly specified experiment proposal that could test an interpretation of those findings.
+
+The underlying research predates the event. Later repository updates will distinguish that prior work from the analysis, presentation and code changes made during the hackathon. Release timing does not establish when a discovery or implementation was made.
 
 ## Delivery status
 
-Snapshot 01 is prepared for its first public GitHub release. Later snapshots are planned. A prepared package, a published repository update and a submission to the hackathon are distinct states.
+The initial code parcel is published. Later repository revisions and the final presentation are separate work items. No official checkpoint or final submission is confirmed by this release plan.
+
+The [12 September announcement at 19:54 ET](https://discord.com/channels/1547616640559218718/1547627043619864656) identifies the shared folder as the preferred submission destination and GitHub primarily for after the hackathon. The relevant destination is the [Life Sciences folder](https://drive.google.com/drive/folders/1Z3mxv0A4jusjYH8oOOFUs3D6oI590wnJ).
