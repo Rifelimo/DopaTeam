@@ -1,6 +1,6 @@
 # DopaTeam
 
-Life Sciences · Code parcel 02 of 04 · Model and numerical reference
+Life Sciences · Code parcel 03 of 04 · Validated local input and comparison
 
 [GitHub](https://github.com/Rifelimo/DopaTeam) · [Project presentation](https://dopateam.vercel.app) · [Release history](CHANGELOG.md)
 
@@ -16,6 +16,7 @@ Node.js 20 or later and Python 3.10 or later. The command line calculations use 
 npm run demo
 npm run states
 npm run reference
+npm run compare
 ```
 
 What to look for:
@@ -25,6 +26,14 @@ What to look for:
 - **Independent reference:** Python reproduces the default state outputs and the `4.32` difference divided by assumed noise. Its regional fixture is separate; do not compare its map rankings with the JavaScript fixture. Model time is arbitrary, not years.
 
 Read [THEORY.md](THEORY.md) for the equations, assumptions and what this example can establish.
+
+## Compare your own aligned inputs
+
+```sh
+npm run compare -- --input /path/to/bundle.json --profile AD_vs_CN
+```
+
+Use an authorized local bundle with the specified profile. The command checks the input before calculating results. It prints only a local comparison and never uploads the file. The [local import guide](docs/local-import.md) covers the audited CSV converter, required alignment and source revision. Standard tests need no research access.
 
 ## Verify the release
 
@@ -41,10 +50,10 @@ Checks cover known rank examples, unchanged descriptors under alternate model ga
 | --- | --- | --- |
 | 01 | Rank regional patterns and inspect sensitivity | Available |
 | 02 | Test the limits of interpreting a fixed pattern | Available |
-| 03 | Validate and compare local input bundles | Scheduled |
+| 03 | Validate and compare local input bundles | Available |
 | 04 | Explore the same functions in one interface | Scheduled |
 
-**Next:** add a validated path from an authorized local bundle to the same regional comparison. The importer and interface are not public yet.
+**Next:** expose these existing calculations and input checks through the local interactive prototype. The interface source is not public yet.
 
 [ROADMAP.md](ROADMAP.md) explains why each step follows the previous one, its acceptance criteria and publication time. Each version is cumulative. Existing implementation is published gradually with its origin recorded; publication dates do not imply new experiments or new dates for earlier research.
 

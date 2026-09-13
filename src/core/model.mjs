@@ -31,3 +31,5 @@ export function measurementScores(params){const {a,b}=evaluate(params);return [
  {id:'atlas',name:'Another normative atlas score',a:0,b:0,noise:params.noise,separation:0,meaning:'Same observed vector and fixed reference maps.',limit:'More descriptors of identical inputs cannot recover an omitted variable.'},
  {id:'function',name:'Independent functional output',a:a.output,b:b.output,noise:params.noise,separation:Math.abs(a.output-b.output)/params.noise,meaning:'Direct model readout: Y = F + noise.',limit:Math.abs(a.output-b.output)>1e-8?'Separates the constructed pair. Does not identify SST cells or a biological clock.':'Equal functional outputs leave this pair indistinguishable, even without noise.'}
  ];}
+
+export { validateBundle } from './bundle.mjs';

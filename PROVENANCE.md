@@ -30,6 +30,10 @@ The [Life Sciences brief](https://docs.google.com/document/d/1NhHbo8ccaufwQraju_
 
 The conditional state functions, numerical Python reference and model tests are published from the existing local DopaTeam prototype. The state command line wrapper and a JavaScript to Python numerical agreement test are added for this release. Shared regional comparison functions remain in the original module and are reexported by the model module. The bundle validator and local aggregate importer remain scheduled for parcel 03; the interactive source remains scheduled for parcel 04. No MINNT notebook or research value arrays are included.
 
+## Parcel 03
+
+The local aggregate importer and bundle validator come from the existing local prototype. New tests exercise them with temporary invented values. The importer retains its audited older source revision and does not include or redistribute the research arrays.
+
 ## Release sequence review
 
 The 13 September review connects the four code parcels through explicit capability checks. It adds input and numeric boundary corrections to the current model. The command line path for validated bundles and its integration tests are prepared for parcel 03. These changes are implementation and release work, not new biological evidence.

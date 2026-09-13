@@ -1,6 +1,6 @@
 {
   "name": "dopateam-research-code",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "private": true,
   "type": "module",
   "description": "DopaTeam regional comparison and conditional model with an independent numerical reference",
@@ -12,6 +12,7 @@
     "test": "node --test tests/*.test.mjs",
     "states": "node scripts/state_demo.mjs",
     "reference": "python3 scripts/reference.py --pretty",
-    "test:python": "python3 -m unittest discover -s tests -p 'test_*.py'"
+    "test:python": "python3 -m unittest discover -s tests -p 'test_*.py'",
+    "compare": "node scripts/compare_bundle.mjs"
   }
 }
