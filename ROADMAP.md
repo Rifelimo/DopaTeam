@@ -1,28 +1,38 @@
 # DopaTeam release plan
 
-The initial synthetic code parcel is already published. It remains available while later updates focus on the coauthored article, its evidence, a proposed next experiment and the final pitch. Each update will describe what changed, what was checked and what remains uncertain.
+The initial code and the current research presentation are already public. Our final reference is this approved project: the article analysis, three page website and initial synthetic comparison code. Upcoming checkpoints preserve that content and record real corrections and completed checks. Existing work is not presented as newly created at each checkpoint.
 
-The internal target interval is ten hours. Completed website versions are checked and published before the next version begins. The organizer’s fixed checkpoint deadlines are separate from this cadence; a repository update does not establish checkpoint delivery.
+## Delivery schedule
 
-| Snapshot | Planned contents | Completion criterion |
+All times are Boston time (America/New_York). Prepare each package at 09:00 or 21:00, then start its code delivery at least two hours before the official deadline.
+
+| Checkpoint | Planned code delivery | Official deadline |
 | --- | --- | --- |
-| 01 · Initial code and introduction | Published synthetic generator, regional comparison module, command line demo, numerical tests and website source | The example uses 82 invented regions and 30 invented maps; its limits and run instructions are explicit. |
-| 02 · Article and context | Presentation of the 2026 manuscript, the Alzheimer’s burden and the treatment research question | Every material claim has a source; the separate 2025 publication is clearly distinguished. |
-| 03 · Evidence and interpretation | Explain the methods, reported results, alternative explanations and limitations | Manuscript findings are separated from our interpretation; no reproduction of the paper’s results is claimed. |
-| 04 · Next experiment | Define a biological hypothesis, measurable outcome, comparison and result that would change the interpretation | The proposal states what it could establish and what would remain uncertain. |
-| 05 · Final pitch | Refine the research argument and presentation for the hackathon | The pitch matches the article analysis, attribution and limits. |
-| 06 · Final review | Check sources, links, scientific wording and the exact proposed submission package | The final package is complete, checked and ready before the organizer’s deadline. |
+| 12h | Delivered 12 September at 21:54 | 13 September at 00:00 |
+| 24h | 13 September at 09:59 | 13 September at 12:00 |
+| 36h | 13 September at 21:59 | 14 September at 00:00 |
+| 48h | 14 September at 09:59 | 14 September at 12:00 |
+| Final | 14 September at 21:59 | 14 September at 23:59 |
 
-## Quality standard
+Sponsored tool access ends on 14 September at noon. Keep the complete source and final reference available before that cutoff. Scheduled times are targets; only verified receipts establish delivery.
 
-Every update should answer three questions: what changed, what was checked and what remains uncertain.
+## What each checkpoint adds
 
-Software tests establish properties of the implementation. They do not establish biological validity or clinical usefulness. The synthetic calculation does not reproduce the article’s results. The next scientific step is a clearly specified experiment proposal that could test an interpretation of those findings.
+- **24h:** update the official code package to the current approved source, with the revised team presentation and concise scientific foundation already on GitHub.
+- **36h:** review references, attribution and interpretation; correct only issues actually found.
+- **48h:** confirm the complete code package and verification evidence are available before sponsored access ends.
+- **Final:** compare the delivered files with the final reference and account for any subsequent approved changes.
 
-The underlying research predates the event. Later repository updates will distinguish that prior work from the analysis, presentation and code changes made during the hackathon. Release timing does not establish when a discovery or implementation was made.
+The same source commit may serve more than one checkpoint if the code has not changed. Checkpoint tags identify deliveries without creating artificial code changes. The final code should match the approved reference, including any later corrections agreed with Ricardo.
 
-## Delivery status
+## Quality and provenance
 
-The initial code parcel is published. Later repository revisions and the final presentation are separate work items. No official checkpoint or final submission is confirmed by this release plan.
+The example uses 82 invented regions and 30 invented reference maps. Software checks establish numerical behavior, not biological validity or treatment benefit. The example does not reproduce the research article's results.
 
-The [12 September announcement at 19:54 ET](https://discord.com/channels/1547616640559218718/1547627043619864656) identifies the shared folder as the preferred submission destination and GitHub primarily for after the hackathon. The relevant destination is the [Life Sciences folder](https://drive.google.com/drive/folders/1Z3mxv0A4jusjYH8oOOFUs3D6oI590wnJ).
+The underlying research predates the event. Repository updates distinguish it from analysis, presentation and implementation completed during the hackathon. Release dates do not establish when research was performed.
+
+## Submission destination
+
+The [12 September announcement at 19:54 ET](https://discord.com/channels/1547616640559218718/1547627043619864656) identifies the shared folder as the preferred submission destination and GitHub primarily for after the hackathon. Code packages go in the appropriate checkpoint subfolder within the team's [Life Sciences submission area](https://drive.google.com/drive/folders/1YSD_H5YOLNuE3B3ZPG74z2rQ5tZlHbvH).
+
+The initial code ZIP has been delivered. Later deliveries are scheduled. The checkpoint video has not been delivered by this code workflow; code publication alone does not establish a complete checkpoint or judging acceptance.
