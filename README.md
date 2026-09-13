@@ -1,5 +1,7 @@
 # DopaTeam
 
+Team: DopaTeam · Track: Life Sciences · Initial source snapshot
+
 ## What should we measure next in Alzheimer’s research?
 
 DopaTeam explores a practical research decision: when the same evidence fits different explanations, which additional measurement could tell them apart?
@@ -42,7 +44,7 @@ The site explains the work in plain English. The interactive research prototype 
 
 The earlier [five minute spoken pitch](docs/pitch.md) remains available as a separate draft.
 
-The public website is [dopateam.vercel.app](https://dopateam.vercel.app). This local snapshot contains presentation updates awaiting publication approval. GitHub integration and teammate editing access are still pending. Once an approved connection is active, changes committed to `main` can update the website automatically. See [how to edit and publish](docs/deployment.md).
+The website is public at [dopateam.vercel.app](https://dopateam.vercel.app). This repository supplies its source and the initial runnable comparison module. Automatic deployment from GitHub and teammate editing access require separate setup; publishing this repository alone does not enable either. See [how to edit and publish](docs/deployment.md).
 
 ## What has been built
 
@@ -63,6 +65,8 @@ João Valério Rocha and collaborators’ MINNT research motivates the original 
 ## Project
 
 Project lead: Ricardo Félix Morais · Life Sciences
+
+The organizers' latest Discord clarification identifies the shared Drive folder as the preferred checkpoint destination and GitHub primarily as the code record after the hackathon. Publishing a repository is not confirmation that a checkpoint or final submission has been received.
 
 Ricardo leads DopaTeam with his colleagues Alex Chen and Seika Karamatsu. He is a neuroradiologist, researcher and MIT Sloan Fellows MBA student. Codex assisted with code, documentation and review.
 

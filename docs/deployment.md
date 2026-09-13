@@ -35,9 +35,9 @@ The expected source upload consists of `index.html`, `impact.html`, `hackathon.h
 vercel deploy --prod --project dopateam --scope krakras-projects
 ```
 
-## Check the first publication
+## Verify publication and integration
 
-This snapshot prepares the configuration. It does not establish that the GitHub connection, collaborator access or website deployment is already active.
+The three page website is public at https://dopateam.vercel.app. Publishing this repository does not establish a GitHub deployment connection or give teammates editing access. Those steps remain separate.
 
 After setup, record the returned production URL. Open it without a Vercel login and check all three pages, their navigation and mobile layout. Confirm the production deployment uses the intended commit. Confirm each collaborator accepts their invitation before reporting that they have editing access.
 
