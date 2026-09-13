@@ -1,6 +1,6 @@
 {
   "name": "dopateam-research-code",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": true,
   "type": "module",
   "description": "DopaTeam regional comparison and conditional model with an independent numerical reference",

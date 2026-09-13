@@ -23,3 +23,26 @@ test('JavaScript results agree with the independent Python reference', () => {
   close(transitionTime(defaults.substrate,defaults.gainA,defaults.threshold,defaults.rate),ref.states.A.transition_time);
   close(transitionTime(defaults.substrate,defaults.gainB,defaults.threshold,defaults.rate),ref.states.B.transition_time);
 });
+
+test('missing and nonfinite model parameters fail instead of producing NaN', () => {
+  for (const name of Object.keys(defaults)) {
+    const missing={...defaults}; delete missing[name];
+    assert.throws(()=>evaluate(missing), /present and finite/);
+    for (const value of [undefined, NaN, Infinity, '0.1']) {
+      assert.throws(()=>evaluate({...defaults,[name]:value}), /present and finite/);
+    }
+  }
+  assert.throws(()=>evaluate(null), /present and finite/);
+});
+
+test('large finite ratios have finite transition times and overflow is rejected', () => {
+  const actual=transitionTime(1e300,1,1e-300,1);
+  const reference=Number(execFileSync('python3',['-c',
+    'import sys; sys.path.insert(0,"scripts"); from reference import transition_time; print(transition_time(1e300,1,1e-300,1))'],
+    {cwd:new URL('../',import.meta.url),encoding:'utf8'}));
+  assert.ok(Number.isFinite(actual));
+  assert.ok(Math.abs(actual-reference)<1e-12);
+  assert.throws(()=>transitionTime(1e308,2,1,1), /numeric range/);
+  assert.throws(()=>evaluate({...defaults,substrate:1e308,gainA:2}), /numeric range/);
+  assert.throws(()=>evaluate({...defaults,noise:Number.MIN_VALUE}), /numeric range/);
+});
