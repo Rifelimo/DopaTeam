@@ -1,12 +1,17 @@
 {
-  "name": "dopateam-initial-code",
-  "version": "0.1.0",
+  "name": "dopateam-research-code",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
-  "description": "Original DopaTeam molecular comparison demo with synthetic data only",
-  "engines": { "node": ">=20" },
+  "description": "DopaTeam regional comparison and conditional model with an independent numerical reference",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "demo": "node scripts/demo.mjs",
-    "test": "node --test tests/*.test.mjs"
+    "test": "node --test tests/*.test.mjs",
+    "states": "node scripts/state_demo.mjs",
+    "reference": "python3 scripts/reference.py --pretty",
+    "test:python": "python3 -m unittest discover -s tests -p 'test_*.py'"
   }
 }

@@ -1,6 +1,6 @@
 # DopaTeam
 
-Team: DopaTeam · Track: Life Sciences · Initial source snapshot
+Team: DopaTeam · Track: Life Sciences · Code parcel 02 of 04
 
 Code: [Rifelimo/DopaTeam](https://github.com/Rifelimo/DopaTeam) · Website: [dopateam.vercel.app](https://dopateam.vercel.app)
 
@@ -12,15 +12,18 @@ The presentation starts with the human and economic burden of Alzheimer’s dise
 
 The practical question is how a biological clue from brain imaging could inform the next experiment. This is an analysis of existing research. The initial code below is a separate numerical illustration, not a reproduction of the article’s results.
 
-## Run the initial code
+## Run the current code
 
-The initial published code parcel stays in this repository: a deterministic synthetic dataset, regional pattern comparison and a command line example. Later updates will develop the evidence analysis, the next proposed experiment and the final pitch.
+Parcel 01 provides the synthetic regional comparison. Parcel 02 adds the existing conditional state model, a runnable state comparison, an independent Python numerical reference and tests. Later parcels add local input validation and the existing interactive prototype source.
 
-Use Node.js with the built in test runner. This snapshot was checked with Node.js 23.10.0 and needs no downloaded packages.
+Use Node.js 20 or later and Python 3.10 or later. The current command line code uses built in libraries and needs no downloaded packages. The combined test suite needs both runtimes.
 
 ```sh
 npm run demo
+npm run states
+npm run reference
 npm test
+npm run test:python
 ```
 
 The demo compares one synthetic structural pattern across 82 invented regions with 30 invented reference maps. It returns the five strongest rank correlations and shows how each changes when one region is omitted. All inputs are invented. A high correlation here illustrates pattern comparison; it does not identify a neurotransmitter mechanism or cell function.
@@ -33,6 +36,15 @@ Code locations:
 - `tests/molecular.test.mjs`: numerical and input checks.
 
 The invented regions and maps in this example are separate from the participants, measurements and findings reported in the article.
+
+
+### What parcel 02 adds
+
+`npm run states` constructs two illustrative functional states with identical structural observations. Under the stated model, their outputs differ because an unobserved response gain differs. It also compares hypothetical measurements and calculates threshold crossing in arbitrary model time. `npm run reference` independently calculates the example in Python. See [the model and assumptions](THEORY.md).
+
+New source: `src/core/model.mjs`, `scripts/state_demo.mjs`, `scripts/reference.py`, `tests/model.test.mjs` and `tests/test_reference.py`. These modules come from the existing local prototype; the command line wrapper and cross language comparison are added for this release. This is staged publication of existing implementation, not newly obtained biological evidence.
+
+The local aggregate importer, its input validator and the interactive interface are not included yet. [The four parcel plan](ROADMAP.md) identifies their release order.
 
 ## Explore the project explanation
 
@@ -48,7 +60,7 @@ The [spoken pitch](docs/pitch.md) follows the current research presentation.
 
 The website is public at [dopateam.vercel.app](https://dopateam.vercel.app). This repository supplies its source and the initial runnable comparison module. Automatic deployment from GitHub and teammate editing access require separate setup; publishing this repository alone does not enable either. See [how to edit and publish](docs/deployment.md).
 
-## Initial checkpoint code
+## Initial comparison retained
 
 - **Included:** the published synthetic generator, regional comparison module, command line demonstration and numerical tests, alongside the website source.
 - **What it establishes:** the documented calculation can run on invented inputs and its numerical behavior can be checked. It does not reproduce the paper’s results or validate a biological interpretation.
@@ -58,7 +70,7 @@ The [release plan](ROADMAP.md) follows the research analysis and presentation. R
 
 ## What the demonstration establishes
 
-The runnable code ranks correlations between an invented regional pattern and invented reference maps, then checks sensitivity to omitting one region. Its tests check numerical behavior and input handling.
+The regional comparison ranks invented maps and checks sensitivity to omitting one region. The added state model explores hypothetical functional outputs under explicit assumptions. Its reference and tests check numerical behavior and agreement across JavaScript and Python.
 
 All values in this example are simulated. A correlation does not identify a neurotransmitter mechanism, a cellular state or an effective treatment. Neither software tests nor the presentation establish biological validity or clinical usefulness.
 

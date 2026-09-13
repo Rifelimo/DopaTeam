@@ -1,38 +1,25 @@
-# DopaTeam release plan
+# DopaTeam: four code parcels
 
-The initial code and the current research presentation are already public. Our final reference is this approved project: the article analysis, three page website and initial synthetic comparison code. Upcoming checkpoints preserve that content and record real corrections and completed checks. Existing work is not presented as newly created at each checkpoint.
+The existing local implementation is published in four cumulative code parcels. Each parcel adds specific executable modules. Release dates record publication; the underlying scientific work and previously written implementation retain their provenance.
 
-## Delivery schedule
-
-All times are Boston time (America/New_York). The next package is prepared on 13 September at 10:00 and delivered at 10:45, as requested by Ricardo, leaving 1h15 before the noon deadline. Other packages are prepared at 09:00 or 21:00 and retain at least two hours before their deadlines.
-
-| Checkpoint | Planned code delivery | Official deadline |
+| Parcel | Code added | GitHub target, Boston time |
 | --- | --- | --- |
-| 12h | Delivered 12 September at 21:54 | 13 September at 00:00 |
-| 24h | 13 September at 10:45 | 13 September at 12:00 |
-| 36h | 13 September at 21:59 | 14 September at 00:00 |
-| 48h | 14 September at 09:59 | 14 September at 12:00 |
-| Final | 14 September at 21:59 | 14 September at 23:59 |
+| 01 | Synthetic regional comparison, map ranking, command line example and initial numerical tests | Published 12 September |
+| 02 | Conditional state model, state command line example, independent Python reference, model tests and method documentation | 13 September, current release |
+| 03 | Local aggregate import script, input bundle validator, import checks and usage instructions | 13 September at 21:59 |
+| 04 | Remaining interactive prototype source, components, local run configuration and complete setup instructions | 14 September at 09:59 |
+| Final verification | Verify the complete parcel 04 tree and any later authorized fixes; tag the final version | 14 September at 21:59 |
 
-Sponsored tool access ends on 14 September at noon. Keep the complete source and final reference available before that cutoff. Scheduled times are targets; only verified receipts establish delivery.
+The final check is not a fifth code parcel. The public presentation pages remain separate from the local runnable prototype. The final target includes all portable code from the existing prototype, with the shared comparison module and the current presentation retained. Original MINNT notebooks, participant records and research value arrays are outside this portable code target.
 
-## What each checkpoint adds
+## Release verification
 
-- **24h:** update the official code package to the current approved source, with the revised team presentation and concise scientific foundation already on GitHub.
-- **36h:** review references, attribution and interpretation; correct only issues actually found.
-- **48h:** confirm the complete code package and verification evidence are available before sponsored access ends.
-- **Final:** compare the delivered files with the final reference and account for any subsequent approved changes.
+For every parcel, verify the previous remote commit, add only the listed modules, run relevant checks, update the README and publish a normal Git commit. Use `parcel-02`, `parcel-03` and `parcel-04` to identify the corresponding code releases. An existing tag is never rewritten. `checkpoint-24h` identifies the earlier website and documentation snapshot; `parcel-02` identifies the actual next code addition.
 
-The same source commit may serve more than one checkpoint if the code has not changed. Checkpoint tags identify deliveries without creating artificial code changes. The final code should match the approved reference, including any later corrections agreed with Ricardo.
+The final source and its file hashes are fixed locally before later parcels are published. Later user edits must be reconciled instead of overwritten. A repeated source commit is not described as new code.
 
-## Quality and provenance
+## Requirements
 
-The example uses 82 invented regions and 30 invented reference maps. Software checks establish numerical behavior, not biological validity or treatment benefit. The example does not reproduce the research article's results.
+The [Life Sciences brief](https://docs.google.com/document/d/1NhHbo8ccaufwQraju_mApEUghlrkpl5V/edit) asks for an inspectable or reproducible artifact, its assumptions, sources and next test. The current example uses simulated inputs and does not reproduce the article's analysis. Model time is not calendar time, and numerical tests are not biological validation.
 
-The underlying research predates the event. Repository updates distinguish it from analysis, presentation and implementation completed during the hackathon. Release dates do not establish when research was performed.
-
-## Submission destination
-
-The [12 September announcement at 19:54 ET](https://discord.com/channels/1547616640559218718/1547627043619864656) identifies the shared folder as the preferred submission destination and GitHub primarily for after the hackathon. Code packages go in the appropriate checkpoint subfolder within the team's [Life Sciences submission area](https://drive.google.com/drive/folders/1YSD_H5YOLNuE3B3ZPG74z2rQ5tZlHbvH).
-
-The initial code ZIP has been delivered. Later deliveries are scheduled. The checkpoint video has not been delivered by this code workflow; code publication alone does not establish a complete checkpoint or judging acceptance.
+The organizer confirmed on 12 September at 20:13 in [Discord](https://discord.com/channels/1547616640559218718/1547628793982885990) that a public repository link and video can be provided in the checkpoint folder. This workflow manages GitHub only. Video and checkpoint folder submission are handled separately.

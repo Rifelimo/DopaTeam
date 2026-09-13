@@ -1,6 +1,6 @@
 # Source and contribution record
 
-## This initial code parcel
+## Code provenance
 
 DopaTeam is led by Ricardo Félix Morais, with Alex Chen and Seika Karamatsu. Codex assisted with code, documentation and review. Specific contributions will be recorded as the team adds work.
 
@@ -25,3 +25,7 @@ The regional comparison tests check numerical behavior. Neither these checks nor
 The full DopaTeam prototype was prepared before this first staged repository release. Subsequent parcels will state which existing files become public and which new changes were actually made. Original Git authorship and timestamps are retained; publication cadence does not imply that inherited research was created during the event.
 
 The [Life Sciences brief](https://docs.google.com/document/d/1NhHbo8ccaufwQraju_mApEUghlrkpl5V/edit) asks teams to identify external code, models, datasets and prior research. This record supports that requirement. A personal GitHub release is separate from the official hub submission and checkpoint materials.
+
+## Parcel 02
+
+The conditional state functions, numerical Python reference and model tests are published from the existing local DopaTeam prototype. The state command line wrapper and a JavaScript to Python numerical agreement test are added for this release. Shared regional comparison functions remain in the original module and are reexported by the model module. The bundle validator and local aggregate importer remain scheduled for parcel 03; the interactive source remains scheduled for parcel 04. No MINNT notebook or research value arrays are included.
