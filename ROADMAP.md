@@ -4,12 +4,12 @@ The initial code and the current research presentation are already public. Our f
 
 ## Delivery schedule
 
-All times are Boston time (America/New_York). Prepare each package at 09:00 or 21:00, then start its code delivery at least two hours before the official deadline.
+All times are Boston time (America/New_York). The next package is prepared on 13 September at 10:00 and delivered at 10:45, as requested by Ricardo, leaving 1h15 before the noon deadline. Other packages are prepared at 09:00 or 21:00 and retain at least two hours before their deadlines.
 
 | Checkpoint | Planned code delivery | Official deadline |
 | --- | --- | --- |
 | 12h | Delivered 12 September at 21:54 | 13 September at 00:00 |
-| 24h | 13 September at 09:59 | 13 September at 12:00 |
+| 24h | 13 September at 10:45 | 13 September at 12:00 |
 | 36h | 13 September at 21:59 | 14 September at 00:00 |
 | 48h | 14 September at 09:59 | 14 September at 12:00 |
 | Final | 14 September at 21:59 | 14 September at 23:59 |
