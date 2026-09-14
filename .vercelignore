@@ -1,7 +1,13 @@
-# Only the three public pages, shared styling and deployment configuration are uploaded.
+# Upload the public pages and the source required to build the prototype.
 *
 !index.html
 !impact.html
 !hackathon.html
 !site.css
 !vercel.json
+!prototype.html
+!package.json
+!package-lock.json
+!vite.config.js
+!src
+!src/**

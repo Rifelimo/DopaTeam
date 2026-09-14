@@ -1,6 +1,6 @@
 # Edit and publish the website
 
-The website has three pages: `index.html` explains the project, `impact.html` covers impact and the treatment opportunity, and `hackathon.html` describes the next steps. Shared styling is in `site.css`. The interactive application is separate.
+The website has three pages: `index.html` explains the project, `impact.html` covers impact and the treatment opportunity, and `hackathon.html` describes the next steps. Shared styling is in `site.css`. The interactive application is available at `/prototype.html`, alongside the presentation pages.
 
 ## Make a change in your browser
 
@@ -17,11 +17,11 @@ Everyone edits the same source. Refresh before starting and check for recent cha
 
 ## How publishing works
 
-The intended connection is the public `Rifelimo/DopaTeam` GitHub repository to the `dopateam` Vercel project. The production branch is `main`. GitHub collaborators can edit the code and trigger publication through this connection. They do not need the owner's Vercel password.
+The connected repository is the public `Rifelimo/DopaTeam` GitHub repository, linked to the `dopateam` Vercel project. The production branch is `main`. GitHub collaborators can edit the code and trigger publication through this connection. They do not need the owner's Vercel password.
 
 Vercel serves the website. It is not the editor used in these steps. Opening the public page lets a visitor use it; changing it requires access to the GitHub source.
 
-The build command copies `index.html`, `impact.html`, `hackathon.html` and `site.css` into `dist/`. Vercel serves only the `dist` directory. The site needs no dependencies, database or environment variables. Repository documentation is not part of the served website. The `.vercelignore` file also limits deployment source files to these four website files and `vercel.json`.
+Vercel installs the locked dependencies with `npm ci --include=dev`. The build runs `npm run build` to compile `prototype.html` and its React modules into `prototype-dist/`, then copies `index.html`, `impact.html`, `hackathon.html` and `site.css` into the same directory. Vercel serves `prototype-dist/`: the main address opens the presentation and `/prototype.html` opens the working interface. No database or environment variables are required. Repository documentation and local research inputs are not served. The `.vercelignore` allowlist includes the static pages, prototype entry, package files, Vite configuration and `src/` needed for the build.
 
 For an optional CLI deployment, first link the local directory to the existing project in the intended account. Then inspect the upload:
 
@@ -29,7 +29,7 @@ For an optional CLI deployment, first link the local directory to the existing p
 vercel deploy --dry --format=json --scope krakras-projects
 ```
 
-The expected source upload consists of `index.html`, `impact.html`, `hackathon.html`, `site.css` and `vercel.json`. After review, an authorized production deployment can use:
+The expected source upload contains the four static presentation files, `vercel.json`, `prototype.html`, `package.json`, `package-lock.json`, `vite.config.js` and the `src/` files. It must not include local research inputs, credentials, dependencies or build output. After review, an authorized production deployment can use:
 
 ```sh
 vercel deploy --prod --project dopateam --scope krakras-projects
@@ -37,9 +37,9 @@ vercel deploy --prod --project dopateam --scope krakras-projects
 
 ## Verify publication and integration
 
-The three page website is public at https://dopateam.vercel.app. Publishing this repository does not establish a GitHub deployment connection or give teammates editing access. Those steps remain separate.
+The presentation is public at https://dopateam.vercel.app and the prototype is at https://dopateam.vercel.app/prototype.html. This project already has the GitHub connection enabled. Repository editing permissions are managed separately.
 
-After setup, record the returned production URL. Open it without a Vercel login and check all three pages, their navigation and mobile layout. Confirm the production deployment uses the intended commit. Confirm each collaborator accepts their invitation before reporting that they have editing access.
+After setup, record the returned production URL. Open it without a Vercel login and check all three presentation pages and `/prototype.html`, including its assets, model controls, import and local export. Confirm the production deployment uses the intended commit. Confirm each collaborator accepts their invitation before reporting that they have editing access.
 
 ## Account access
 

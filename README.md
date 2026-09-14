@@ -46,6 +46,8 @@ Use an authorized local bundle with the specified profile. The command checks th
 
 ## Run the interactive prototype
 
+[Open the public prototype](https://dopateam.vercel.app/prototype.html). The presentation remains at the main website address.
+
 ```sh
 npm ci
 npm run dev
