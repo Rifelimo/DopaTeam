@@ -1,4 +1,4 @@
-# DopaTeam
+# StarLens by DopaTeam
 
 Life Sciences · Code parcel 04 of 04 · Complete local prototype
 
@@ -60,7 +60,15 @@ npm run build
 npm run preview
 ```
 
-The build writes `prototype-dist/`; preview serves `/prototype.html`. The presentation at `index.html` has a separate purpose and remains unchanged by these code releases.
+The build writes all four pages and their assets to `prototype-dist/`. Preview serves the redesigned overview at `/`, scientific context at `/impact.html`, build evidence at `/hackathon.html`, and the analysis workspace at `/prototype.html`.
+
+## Website and visual design
+
+The StarLens website uses a black canvas, regular Noto Sans JP typography, violet actions and an original particle illustration derived from licensed standard brain geometry. The homepage comparison imports the existing synthetic fixture and Spearman function. Its values are demonstrations, not clinical results.
+
+The separately published [Neural Observatory](https://starlens-brain-atlas.sese16180.chatgpt.site/observatory.html) is linked from the overview. It is not bundled here. Standard anatomy and illustrative overlays do not establish a correspondence with the prototype's invented region IDs.
+
+Read [website maintenance and verification](docs/WEBSITE_REDESIGN.md) and [brain illustration provenance](docs/BRAND_VISUAL_PROVENANCE.md). The numerical model, original fixtures and validation rules are unchanged by the redesign.
 
 ## Verify the release
 

@@ -4,6 +4,9 @@
 !impact.html
 !hackathon.html
 !site.css
+!site.js
+!public
+!public/**
 !vercel.json
 !prototype.html
 !package.json
