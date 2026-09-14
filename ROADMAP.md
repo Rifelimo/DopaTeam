@@ -50,8 +50,8 @@ All times use Boston local time.
 | --- | --- |
 | 01 | Published 12 September |
 | 02 | Published 13 September; numerical review recorded in CHANGELOG.md |
-| 03 | 13 September, 21:59 |
-| 04 | 14 September, 09:59 |
+| 03 | Published 13 September, 19:46 |
+| 04 | 14 September, 02:14 |
 | Final verification | 14 September, 21:59 |
 
 The final verification checks the complete version and applies `checkpoint-final`; it is not a fifth code parcel. Do not describe a repeated snapshot as new functionality. Preserve tags and commit history, including the earlier documentation snapshot identified by `checkpoint-24h`.

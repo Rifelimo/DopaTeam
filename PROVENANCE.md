@@ -34,6 +34,10 @@ The conditional state functions, numerical Python reference and model tests are 
 
 The local aggregate importer and bundle validator come from the existing local prototype. New tests exercise them with temporary invented values. The importer retains its audited older source revision and does not include or redistribute the research arrays.
 
+## Parcel 04
+
+The React interface and components are published from the existing local prototype. Branding is updated to DopaTeam and a dedicated prototype.html entry keeps the current presentation separate. All analyses retain their stated model assumptions and simulated defaults.
+
 ## Release sequence review
 
 The 13 September review connects the four code parcels through explicit capability checks. It adds input and numeric boundary corrections to the current model. The command line path for validated bundles and its integration tests are prepared for parcel 03. These changes are implementation and release work, not new biological evidence.

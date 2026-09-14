@@ -2,6 +2,12 @@
 
 These entries describe capabilities when published, not when the underlying scientific research was performed. Earlier Git tags remain unchanged.
 
+## Parcel 04: complete local interface
+
+Included a detailed methods and results report and corrected the evidence export version to 0.4.0. Final candidate checks passed: 26 JavaScript tests, 16 Python tests, the production build and ten browser workflow checks.
+
+Added the existing React views and components, local import controls and evidence export, with a dedicated prototype.html entry and locked installation dependencies. The interface uses the calculation and validation modules from the earlier parcels. Publishing the source does not replace the public presentation website.
+
 ## Parcel 03: validated input to the same comparison
 
 Added local bundle validation and the audited aggregate converter. The comparison command connects those inputs to the existing map ranking. Regression tests require the portable result to stay identical to parcel 01 and reject invalid input before printing a result. The converter and validator originate in the earlier local prototype; the command and integration tests were added during this release review.
