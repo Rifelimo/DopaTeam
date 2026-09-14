@@ -1,0 +1,985 @@
+{
+  "published": [
+    {
+      "markerId": "5HT1a",
+      "groupId": "AD",
+      "rho": 0.013,
+      "t": 0.602,
+      "p": 0.549,
+      "q": null,
+      "fdrReported": null,
+      "reportedMarker": "",
+      "source": {
+        "location": "Table 2",
+        "pdfPage": 6
+      }
+    },
+    {
+      "markerId": "5HT1a",
+      "groupId": "bvFTD",
+      "rho": 0.004,
+      "t": 0.142,
+      "p": 0.888,
+      "q": null,
+      "fdrReported": null,
+      "reportedMarker": "",
+      "source": {
+        "location": "Table 2",
+        "pdfPage": 6
+      }
+    },
+    {
+      "markerId": "5HT1a",
+      "groupId": "MCI",
+      "rho": 0.027,
+      "t": 0.876,
+      "p": 0.385,
+      "q": null,
+      "fdrReported": null,
+      "reportedMarker": "",
+      "source": {
+        "location": "Table 2",
+        "pdfPage": 6
+      }
+    },
+    {
+      "markerId": "5HT1b",
+      "groupId": "AD",
+      "rho": 0.038,
+      "t": 2.134,
+      "p": 0.036,
+      "q": null,
+      "fdrReported": null,
+      "reportedMarker": "*",
+      "source": {
+        "location": "Table 2",
+        "pdfPage": 6
+      }
+    },
+    {
+      "markerId": "5HT1b",
+      "groupId": "bvFTD",
+      "rho": -0.022,
+      "t": -1.333,
+      "p": 0.187,
+      "q": null,
+      "fdrReported": null,
+      "reportedMarker": "",
+      "source": {
+        "location": "Table 2",
+        "pdfPage": 6
+      }
+    },
+    {
+      "markerId": "5HT1b",
+      "groupId": "MCI",
+      "rho": -0.037,
+      "t": -1.643,
+      "p": 0.107,
+      "q": null,
+      "fdrReported": null,
+      "reportedMarker": "",
+      "source": {
+        "location": "Table 2",
+        "pdfPage": 6
+      }
+    },
+    {
+      "markerId": "5HT2a",
+      "groupId": "AD",
+      "rho": 0.014,
+      "t": 0.692,
+      "p": 0.491,
+      "q": null,
+      "fdrReported": null,
+      "reportedMarker": "",
+      "source": {
+        "location": "Table 2",
+        "pdfPage": 6
+      }
+    },
+    {
+      "markerId": "5HT2a",
+      "groupId": "bvFTD",
+      "rho": -0.015,
+      "t": -0.808,
+      "p": 0.421,
+      "q": null,
+      "fdrReported": null,
+      "reportedMarker": "",
+      "source": {
+        "location": "Table 2",
+        "pdfPage": 6
+      }
+    },
+    {
+      "markerId": "5HT2a",
+      "groupId": "MCI",
+      "rho": 0.022,
+      "t": 1.013,
+      "p": 0.316,
+      "q": null,
+      "fdrReported": null,
+      "reportedMarker": "",
+      "source": {
+        "location": "Table 2",
+        "pdfPage": 6
+      }
+    },
+    {
+      "markerId": "D1",
+      "groupId": "AD",
+      "rho": 0.024,
+      "t": 1.006,
+      "p": 0.317,
+      "q": null,
+      "fdrReported": null,
+      "reportedMarker": "",
+      "source": {
+        "location": "Table 2",
+        "pdfPage": 6
+      }
+    },
+    {
+      "markerId": "D1",
+      "groupId": "bvFTD",
+      "rho": 0.014,
+      "t": 0.478,
+      "p": 0.634,
+      "q": null,
+      "fdrReported": null,
+      "reportedMarker": "",
+      "source": {
+        "location": "Table 2",
+        "pdfPage": 6
+      }
+    },
+    {
+      "markerId": "D1",
+      "groupId": "MCI",
+      "rho": -0.048,
+      "t": -1.609,
+      "p": 0.114,
+      "q": null,
+      "fdrReported": null,
+      "reportedMarker": "",
+      "source": {
+        "location": "Table 2",
+        "pdfPage": 6
+      }
+    },
+    {
+      "markerId": "D2",
+      "groupId": "AD",
+      "rho": -0.036,
+      "t": -2.107,
+      "p": 0.038,
+      "q": null,
+      "fdrReported": null,
+      "reportedMarker": "*",
+      "source": {
+        "location": "Table 2",
+        "pdfPage": 6
+      }
+    },
+    {
+      "markerId": "D2",
+      "groupId": "bvFTD",
+      "rho": 0.033,
+      "t": 1.63,
+      "p": 0.107,
+      "q": null,
+      "fdrReported": null,
+      "reportedMarker": "",
+      "source": {
+        "location": "Table 2",
+        "pdfPage": 6
+      }
+    },
+    {
+      "markerId": "D2",
+      "groupId": "MCI",
+      "rho": -0.005,
+      "t": -0.21,
+      "p": 0.834,
+      "q": null,
+      "fdrReported": null,
+      "reportedMarker": "",
+      "source": {
+        "location": "Table 2",
+        "pdfPage": 6
+      }
+    },
+    {
+      "markerId": "DAT",
+      "groupId": "AD",
+      "rho": 0.039,
+      "t": 1.371,
+      "p": 0.174,
+      "q": null,
+      "fdrReported": null,
+      "reportedMarker": "",
+      "source": {
+        "location": "Table 2",
+        "pdfPage": 6
+      }
+    },
+    {
+      "markerId": "DAT",
+      "groupId": "bvFTD",
+      "rho": 0.012,
+      "t": 0.299,
+      "p": 0.766,
+      "q": null,
+      "fdrReported": null,
+      "reportedMarker": "",
+      "source": {
+        "location": "Table 2",
+        "pdfPage": 6
+      }
+    },
+    {
+      "markerId": "DAT",
+      "groupId": "MCI",
+      "rho": -0.077,
+      "t": -2.325,
+      "p": 0.024,
+      "q": null,
+      "fdrReported": null,
+      "reportedMarker": "*",
+      "source": {
+        "location": "Table 2",
+        "pdfPage": 6
+      }
+    },
+    {
+      "markerId": "FDOPA",
+      "groupId": "AD",
+      "rho": 0.026,
+      "t": 1.136,
+      "p": 0.259,
+      "q": null,
+      "fdrReported": null,
+      "reportedMarker": "",
+      "source": {
+        "location": "Table 2",
+        "pdfPage": 6
+      }
+    },
+    {
+      "markerId": "FDOPA",
+      "groupId": "bvFTD",
+      "rho": 0.009,
+      "t": 0.29,
+      "p": 0.772,
+      "q": null,
+      "fdrReported": null,
+      "reportedMarker": "",
+      "source": {
+        "location": "Table 2",
+        "pdfPage": 6
+      }
+    },
+    {
+      "markerId": "FDOPA",
+      "groupId": "MCI",
+      "rho": -0.023,
+      "t": -0.772,
+      "p": 0.444,
+      "q": null,
+      "fdrReported": null,
+      "reportedMarker": "",
+      "source": {
+        "location": "Table 2",
+        "pdfPage": 6
+      }
+    },
+    {
+      "markerId": "GABAa",
+      "groupId": "AD",
+      "rho": -0.047,
+      "t": -2.574,
+      "p": 0.012,
+      "q": null,
+      "fdrReported": null,
+      "reportedMarker": "*",
+      "source": {
+        "location": "Table 2",
+        "pdfPage": 6
+      }
+    },
+    {
+      "markerId": "GABAa",
+      "groupId": "bvFTD",
+      "rho": 0.041,
+      "t": 2.195,
+      "p": 0.031,
+      "q": null,
+      "fdrReported": null,
+      "reportedMarker": "*",
+      "source": {
+        "location": "Table 2",
+        "pdfPage": 6
+      }
+    },
+    {
+      "markerId": "GABAa",
+      "groupId": "MCI",
+      "rho": 0.042,
+      "t": 1.855,
+      "p": 0.069,
+      "q": null,
+      "fdrReported": null,
+      "reportedMarker": "",
+      "source": {
+        "location": "Table 2",
+        "pdfPage": 6
+      }
+    },
+    {
+      "markerId": "Mu opioid",
+      "groupId": "AD",
+      "rho": 0.061,
+      "t": 2.795,
+      "p": 0.006,
+      "q": null,
+      "fdrReported": null,
+      "reportedMarker": "**",
+      "source": {
+        "location": "Table 2",
+        "pdfPage": 6
+      }
+    },
+    {
+      "markerId": "Mu opioid",
+      "groupId": "bvFTD",
+      "rho": -0.054,
+      "t": -2.259,
+      "p": 0.027,
+      "q": null,
+      "fdrReported": null,
+      "reportedMarker": "*",
+      "source": {
+        "location": "Table 2",
+        "pdfPage": 6
+      }
+    },
+    {
+      "markerId": "Mu opioid",
+      "groupId": "MCI",
+      "rho": -0.021,
+      "t": -0.818,
+      "p": 0.417,
+      "q": null,
+      "fdrReported": null,
+      "reportedMarker": "",
+      "source": {
+        "location": "Table 2",
+        "pdfPage": 6
+      }
+    },
+    {
+      "markerId": "NAT",
+      "groupId": "AD",
+      "rho": 0.008,
+      "t": 0.615,
+      "p": 0.54,
+      "q": null,
+      "fdrReported": null,
+      "reportedMarker": "",
+      "source": {
+        "location": "Table 2",
+        "pdfPage": 6
+      }
+    },
+    {
+      "markerId": "NAT",
+      "groupId": "bvFTD",
+      "rho": -0.004,
+      "t": -0.296,
+      "p": 0.768,
+      "q": null,
+      "fdrReported": null,
+      "reportedMarker": "",
+      "source": {
+        "location": "Table 2",
+        "pdfPage": 6
+      }
+    },
+    {
+      "markerId": "NAT",
+      "groupId": "MCI",
+      "rho": 0.038,
+      "t": 1.859,
+      "p": 0.069,
+      "q": null,
+      "fdrReported": null,
+      "reportedMarker": "",
+      "source": {
+        "location": "Table 2",
+        "pdfPage": 6
+      }
+    },
+    {
+      "markerId": "SERT",
+      "groupId": "AD",
+      "rho": 0.065,
+      "t": 2.177,
+      "p": 0.032,
+      "q": null,
+      "fdrReported": null,
+      "reportedMarker": "*",
+      "source": {
+        "location": "Table 2",
+        "pdfPage": 6
+      }
+    },
+    {
+      "markerId": "SERT",
+      "groupId": "bvFTD",
+      "rho": -0.012,
+      "t": -0.303,
+      "p": 0.762,
+      "q": null,
+      "fdrReported": null,
+      "reportedMarker": "",
+      "source": {
+        "location": "Table 2",
+        "pdfPage": 6
+      }
+    },
+    {
+      "markerId": "SERT",
+      "groupId": "MCI",
+      "rho": -0.093,
+      "t": -2.933,
+      "p": 0.005,
+      "q": null,
+      "fdrReported": null,
+      "reportedMarker": "***",
+      "source": {
+        "location": "Table 2",
+        "pdfPage": 6
+      }
+    },
+    {
+      "markerId": "VAChT",
+      "groupId": "AD",
+      "rho": 0.044,
+      "t": 1.739,
+      "p": 0.085,
+      "q": null,
+      "fdrReported": null,
+      "reportedMarker": "",
+      "source": {
+        "location": "Table 2",
+        "pdfPage": 6
+      }
+    },
+    {
+      "markerId": "VAChT",
+      "groupId": "bvFTD",
+      "rho": -0.013,
+      "t": -0.522,
+      "p": 0.603,
+      "q": null,
+      "fdrReported": null,
+      "reportedMarker": "",
+      "source": {
+        "location": "Table 2",
+        "pdfPage": 6
+      }
+    },
+    {
+      "markerId": "VAChT",
+      "groupId": "MCI",
+      "rho": -0.038,
+      "t": -1.301,
+      "p": 0.199,
+      "q": null,
+      "fdrReported": null,
+      "reportedMarker": "",
+      "source": {
+        "location": "Table 2",
+        "pdfPage": 6
+      }
+    },
+    {
+      "markerId": "mGluR5",
+      "groupId": "AD",
+      "rho": -0.019,
+      "t": -1.255,
+      "p": 0.213,
+      "q": null,
+      "fdrReported": null,
+      "reportedMarker": "",
+      "source": {
+        "location": "Table 2",
+        "pdfPage": 6
+      }
+    },
+    {
+      "markerId": "mGluR5",
+      "groupId": "bvFTD",
+      "rho": 0.02,
+      "t": 1.191,
+      "p": 0.237,
+      "q": null,
+      "fdrReported": null,
+      "reportedMarker": "",
+      "source": {
+        "location": "Table 2",
+        "pdfPage": 6
+      }
+    },
+    {
+      "markerId": "mGluR5",
+      "groupId": "MCI",
+      "rho": 0.049,
+      "t": 2.232,
+      "p": 0.03,
+      "q": null,
+      "fdrReported": null,
+      "reportedMarker": "*",
+      "source": {
+        "location": "Table 2",
+        "pdfPage": 6
+      }
+    }
+  ],
+  "manuscript": [
+    {
+      "markerId": "cumi",
+      "groupId": "AD",
+      "rho": -0.609,
+      "p": null,
+      "q": null,
+      "fdrReported": true,
+      "missingReason": null,
+      "qNote": "Narrative states significant after FDR, exact q not provided",
+      "source": {
+        "pdfPage": 12,
+        "printedPage": 11,
+        "location": "Results narrative"
+      }
+    },
+    {
+      "markerId": "cumi",
+      "groupId": "LMCI",
+      "rho": -0.871,
+      "p": null,
+      "q": 0.003,
+      "fdrReported": true,
+      "missingReason": null,
+      "qNote": "Exact q reported in narrative",
+      "source": {
+        "pdfPage": 12,
+        "printedPage": 11,
+        "location": "Results narrative"
+      }
+    },
+    {
+      "markerId": "cumi",
+      "groupId": "EMCI",
+      "rho": -0.592,
+      "p": null,
+      "q": null,
+      "fdrReported": true,
+      "missingReason": null,
+      "qNote": "Narrative states significant after FDR, exact q not provided",
+      "source": {
+        "pdfPage": 12,
+        "printedPage": 11,
+        "location": "Results narrative"
+      }
+    },
+    {
+      "markerId": "cumi",
+      "groupId": "SMC",
+      "rho": -0.493,
+      "p": null,
+      "q": null,
+      "fdrReported": true,
+      "missingReason": null,
+      "qNote": "Narrative states significant after FDR, exact q not provided",
+      "source": {
+        "pdfPage": 12,
+        "printedPage": 11,
+        "location": "Results narrative"
+      }
+    },
+    {
+      "markerId": "way",
+      "groupId": "AD",
+      "rho": -0.6,
+      "p": null,
+      "q": null,
+      "fdrReported": true,
+      "missingReason": null,
+      "qNote": "Narrative states significant after FDR, exact q not provided",
+      "source": {
+        "pdfPage": 12,
+        "printedPage": 11,
+        "location": "Results narrative"
+      }
+    },
+    {
+      "markerId": "way",
+      "groupId": "LMCI",
+      "rho": -0.821,
+      "p": null,
+      "q": 0.003,
+      "fdrReported": true,
+      "missingReason": null,
+      "qNote": "Exact q reported in narrative",
+      "source": {
+        "pdfPage": 12,
+        "printedPage": 11,
+        "location": "Results narrative"
+      }
+    },
+    {
+      "markerId": "way",
+      "groupId": "EMCI",
+      "rho": -0.591,
+      "p": null,
+      "q": null,
+      "fdrReported": true,
+      "missingReason": null,
+      "qNote": "Narrative states significant after FDR, exact q not provided",
+      "source": {
+        "pdfPage": 12,
+        "printedPage": 11,
+        "location": "Results narrative"
+      }
+    },
+    {
+      "markerId": "way",
+      "groupId": "SMC",
+      "rho": -0.541,
+      "p": null,
+      "q": null,
+      "fdrReported": true,
+      "missingReason": null,
+      "qNote": "Narrative states significant after FDR, exact q not provided",
+      "source": {
+        "pdfPage": 12,
+        "printedPage": 11,
+        "location": "Results narrative"
+      }
+    },
+    {
+      "markerId": "sst",
+      "groupId": "AD",
+      "rho": -0.639,
+      "p": null,
+      "q": 0.002,
+      "fdrReported": true,
+      "missingReason": null,
+      "qNote": "Exact q reported in narrative",
+      "source": {
+        "pdfPage": 13,
+        "printedPage": 12,
+        "location": "Results narrative"
+      }
+    },
+    {
+      "markerId": "sst",
+      "groupId": "LMCI",
+      "rho": -0.846,
+      "p": null,
+      "q": 0.002,
+      "fdrReported": true,
+      "missingReason": null,
+      "qNote": "Exact q reported in narrative",
+      "source": {
+        "pdfPage": 13,
+        "printedPage": 12,
+        "location": "Results narrative"
+      }
+    },
+    {
+      "markerId": "sst",
+      "groupId": "EMCI",
+      "rho": -0.622,
+      "p": null,
+      "q": 0.004,
+      "fdrReported": true,
+      "missingReason": null,
+      "qNote": "Exact q reported in narrative",
+      "source": {
+        "pdfPage": 13,
+        "printedPage": 12,
+        "location": "Results narrative"
+      }
+    },
+    {
+      "markerId": "sst",
+      "groupId": "SMC",
+      "rho": -0.531,
+      "p": null,
+      "q": 0.007,
+      "fdrReported": true,
+      "missingReason": null,
+      "qNote": "Exact q reported in narrative",
+      "source": {
+        "pdfPage": 13,
+        "printedPage": 12,
+        "location": "Results narrative"
+      }
+    },
+    {
+      "markerId": "vip",
+      "groupId": "AD",
+      "rho": -0.478,
+      "p": null,
+      "q": 0.015,
+      "fdrReported": true,
+      "missingReason": null,
+      "qNote": "Exact q reported in narrative",
+      "source": {
+        "pdfPage": 13,
+        "printedPage": 12,
+        "location": "Results narrative"
+      }
+    },
+    {
+      "markerId": "vip",
+      "groupId": "LMCI",
+      "rho": -0.494,
+      "p": null,
+      "q": 0.021,
+      "fdrReported": true,
+      "missingReason": null,
+      "qNote": "Exact q reported in narrative",
+      "source": {
+        "pdfPage": 13,
+        "printedPage": 12,
+        "location": "Results narrative"
+      }
+    },
+    {
+      "markerId": "vip",
+      "groupId": "EMCI",
+      "rho": -0.493,
+      "p": null,
+      "q": 0.032,
+      "fdrReported": true,
+      "missingReason": null,
+      "qNote": "Exact q reported in narrative",
+      "source": {
+        "pdfPage": 13,
+        "printedPage": 12,
+        "location": "Results narrative"
+      }
+    },
+    {
+      "markerId": "vip",
+      "groupId": "SMC",
+      "rho": null,
+      "p": null,
+      "q": null,
+      "fdrReported": null,
+      "missingReason": "SMC coefficient is not reported in the Results narrative. Figure 2C shows this cell as non-significant, without a coefficient. Do not replace it with zero.",
+      "qNote": "Exact q not provided in narrative",
+      "source": {
+        "pdfPage": 13,
+        "printedPage": 12,
+        "location": "Results narrative"
+      }
+    },
+    {
+      "markerId": "d2",
+      "groupId": "AD",
+      "rho": -0.438,
+      "p": null,
+      "q": 0.038,
+      "fdrReported": true,
+      "missingReason": null,
+      "qNote": "Exact q reported in narrative",
+      "source": {
+        "pdfPage": 12,
+        "printedPage": 11,
+        "location": "Results narrative"
+      }
+    }
+  ],
+  "atrophy": [
+    {
+      "id": "l-hippocampus",
+      "label": "Left hippocampus",
+      "sourceLabel": "L hippocampus",
+      "values": {
+        "AD": "-1.44",
+        "LMCI": "-0.53",
+        "EMCI": "-0.14",
+        "SMC": "0.08"
+      },
+      "source": {
+        "location": "Figure 2A",
+        "pdfPage": 26,
+        "printedPage": 25
+      }
+    },
+    {
+      "id": "l-amygdala",
+      "label": "Left amygdala",
+      "sourceLabel": "L amygdala",
+      "values": {
+        "AD": "-1.38",
+        "LMCI": "-0.39",
+        "EMCI": "-0.21",
+        "SMC": "0.11"
+      },
+      "source": {
+        "location": "Figure 2A",
+        "pdfPage": 26,
+        "printedPage": 25
+      }
+    },
+    {
+      "id": "r-hippocampus",
+      "label": "Right hippocampus",
+      "sourceLabel": "R hippocampus",
+      "values": {
+        "AD": "-1.32",
+        "LMCI": "-0.54",
+        "EMCI": "-0.17",
+        "SMC": "0.05"
+      },
+      "source": {
+        "location": "Figure 2A",
+        "pdfPage": 26,
+        "printedPage": 25
+      }
+    },
+    {
+      "id": "r-amygdala",
+      "label": "Right amygdala",
+      "sourceLabel": "R amygdala",
+      "values": {
+        "AD": "-1.22",
+        "LMCI": "-0.40",
+        "EMCI": "-0.18",
+        "SMC": "0.09"
+      },
+      "source": {
+        "location": "Figure 2A",
+        "pdfPage": 26,
+        "printedPage": 25
+      }
+    },
+    {
+      "id": "l-entorhinal",
+      "label": "Left entorhinal cortex",
+      "sourceLabel": "L entorhinal",
+      "values": {
+        "AD": "-1.09",
+        "LMCI": "-0.46",
+        "EMCI": "-0.02",
+        "SMC": "-0.16"
+      },
+      "source": {
+        "location": "Figure 2A",
+        "pdfPage": 26,
+        "printedPage": 25
+      }
+    },
+    {
+      "id": "l-middle-temporal",
+      "label": "Left middle temporal cortex",
+      "sourceLabel": "L middle temporal",
+      "values": {
+        "AD": "-0.98",
+        "LMCI": "-0.28",
+        "EMCI": "-0.01",
+        "SMC": "-0.02"
+      },
+      "source": {
+        "location": "Figure 2A",
+        "pdfPage": 26,
+        "printedPage": 25
+      }
+    },
+    {
+      "id": "r-middle-temporal",
+      "label": "Right middle temporal cortex",
+      "sourceLabel": "R middle temporal",
+      "values": {
+        "AD": "-0.88",
+        "LMCI": "-0.25",
+        "EMCI": "-0.07",
+        "SMC": "-0.00"
+      },
+      "source": {
+        "location": "Figure 2A",
+        "pdfPage": 26,
+        "printedPage": 25
+      }
+    },
+    {
+      "id": "l-accumbens",
+      "label": "Left accumbens",
+      "sourceLabel": "L accumbens",
+      "values": {
+        "AD": "-0.88",
+        "LMCI": "-0.28",
+        "EMCI": "-0.08",
+        "SMC": "0.13"
+      },
+      "source": {
+        "location": "Figure 2A",
+        "pdfPage": 26,
+        "printedPage": 25
+      }
+    },
+    {
+      "id": "l-inferior-temporal",
+      "label": "Left inferior temporal cortex",
+      "sourceLabel": "L inferior temporal",
+      "values": {
+        "AD": "-0.87",
+        "LMCI": "-0.20",
+        "EMCI": "-0.01",
+        "SMC": "0.01"
+      },
+      "source": {
+        "location": "Figure 2A",
+        "pdfPage": 26,
+        "printedPage": 25
+      }
+    },
+    {
+      "id": "r-accumbens",
+      "label": "Right accumbens",
+      "sourceLabel": "R accumbens",
+      "values": {
+        "AD": "-0.83",
+        "LMCI": "-0.17",
+        "EMCI": "0.03",
+        "SMC": "0.13"
+      },
+      "source": {
+        "location": "Figure 2A",
+        "pdfPage": 26,
+        "printedPage": 25
+      }
+    },
+    {
+      "id": "r-entorhinal",
+      "label": "Right entorhinal cortex",
+      "sourceLabel": "R entorhinal",
+      "values": {
+        "AD": "-0.80",
+        "LMCI": "-0.41",
+        "EMCI": "0.00",
+        "SMC": "-0.17"
+      },
+      "source": {
+        "location": "Figure 2A",
+        "pdfPage": 26,
+        "printedPage": 25
+      }
+    }
+  ]
+}

@@ -707,3 +707,5 @@ footer {
     gap: 16px 24px;
   }
 }
+
+@media (max-width: 800px) { .workflow.workflow-four { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
