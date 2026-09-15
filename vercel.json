@@ -2,7 +2,7 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "version": 2,
   "framework": null,
-  "buildCommand": "npm run build && cp index.html impact.html hackathon.html site.css prototype-dist/",
+  "buildCommand": "npm run build",
   "installCommand": "npm ci --include=dev",
   "outputDirectory": "prototype-dist"
 }

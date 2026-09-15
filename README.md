@@ -1,4 +1,4 @@
-# DopaTeam
+# StarLens by DopaTeam
 
 Life Sciences · Code parcel 04 of 04 · Complete local prototype
 
@@ -6,14 +6,14 @@ Life Sciences · Code parcel 04 of 04 · Complete local prototype
 
 DopaTeam explores how regional brain patterns can inform a next research question. We start with a descriptive comparison, show why that comparison alone does not determine function in an explicit model, then make the same workflow usable with aligned local inputs and an interactive view.
 
-The portable example uses invented values. It supports inspection of the method and its assumptions; it does not reproduce the research article or identify an effective medicine.
+The first view presents reported aggregates from a 2025 publication and a separate 2026 submitted manuscript. The regional sandbox uses invented values. These views support inspection of evidence and assumptions; neither identifies an effective medicine or reruns the original cohort analyses.
 
 ## Results at a glance
 
 - The regional comparison runs on 82 synthetic regions and 30 synthetic reference maps. The strongest example association is 0.818. Loading the same example from a local file gives the same result.
 - With identical observed inputs, the model produces functional outputs of 1.008 and 0.576 when the assumed response gains differ. Setting the gains equal removes the difference.
 - The local interface brings the comparison, model, input validation and export together. The exported report includes the parameters and results, without the raw imported value arrays.
-- Verification passed: 42 automated tests, ten browser workflow checks and the production build.
+- Current verification passed 31 Node tests, 16 Python tests, browser checks and the four-page production build. Reported values were independently compared with the supplied PDFs.
 
 These are reproducible software and simulation results. The model parameters were not fitted to patients, and no treatment benefit was tested.
 
@@ -53,14 +53,24 @@ npm ci
 npm run dev
 ```
 
-Open http://127.0.0.1:5184/prototype.html. The three views let you compare maps, vary the hypothetical states and inspect which measurement separates the constructed pair. They use the same numerical functions and input validator as the command line checks.
+Open http://127.0.0.1:5184/prototype.html. Study evidence compares reported results from the two papers. Regional sandbox, Competing states and Next experiment retain the original functions and input validator. Reported paper values do not set the hypothetical gain, noise or transition-time parameters.
 
 ```sh
 npm run build
 npm run preview
 ```
 
-The build writes `prototype-dist/`; preview serves `/prototype.html`. The presentation at `index.html` has a separate purpose and remains unchanged by these code releases.
+The build writes all four pages and their assets to `prototype-dist/`. Preview serves the redesigned overview at `/`, scientific context at `/impact.html`, build evidence at `/hackathon.html`, and the analysis workspace at `/prototype.html`.
+
+## Website and visual design
+
+The StarLens website uses a black canvas, regular Noto Sans JP typography, violet actions and an original particle illustration derived from licensed standard brain geometry. Its homepage now embeds the same study-evidence explorer as the workspace. It displays 39 published group mean correlations, 16 selected manuscript correlations and explicit missing values. The full workspace also shows 44 rounded regional effect-size values from Figure 2A.
+
+Read [reported-data provenance and limits](docs/STUDY_EVIDENCE.md) before reusing any result. The 2026 source is a submitted manuscript, not an established accepted publication. The PDF files, individual records and complete regional arrays are not distributed here.
+
+The separately published [Neural Observatory](https://starlens-brain-atlas.sese16180.chatgpt.site/observatory.html) is linked from the overview. It is not bundled here. Standard anatomy and illustrative overlays do not establish a correspondence with the prototype's invented region IDs.
+
+Read [website maintenance and verification](docs/WEBSITE_REDESIGN.md) and [brain illustration provenance](docs/BRAND_VISUAL_PROVENANCE.md). The numerical model, original fixtures and validation rules are unchanged by the redesign.
 
 ## Verify the release
 
@@ -90,7 +100,7 @@ Ricardo Félix Morais leads DopaTeam with Alex Chen and Seika Karamatsu. Ricardo
 
 The scientific background includes Ricardo's [2025 Neurobiology of Disease paper](https://pubmed.ncbi.nlm.nih.gov/40194635/) and the separate 2026 manuscript on neurochemical and cellular vulnerability by João Valério Rocha, João Paulo Silva Cunha and Ricardo Félix Morais. These studies motivate the question; they do not validate the illustrative model. [PROVENANCE.md](PROVENANCE.md) identifies the prior research and the source of this implementation.
 
-The public package contains no original MINNT notebook, participant record or research value array. GitHub is this workflow's scope. Checkpoint folder submission and video are handled separately.
+The package includes transcribed aggregate results but no original MINNT notebook, participant records or complete regional input arrays. Checkpoint folder submission and video are handled separately.
 
 ## Methods and verified results
 

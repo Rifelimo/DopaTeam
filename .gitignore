@@ -30,3 +30,6 @@ qa/
 *.zip
 
 prototype-dist/
+
+.vercel
+.env*
